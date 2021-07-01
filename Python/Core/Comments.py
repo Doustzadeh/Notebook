@@ -1,26 +1,26 @@
 # Creating a Comment
 
-#%% Example
+# %% Example
 # This is a comment.
 print("Hello, World!")
 
-#%% Example
+# %% Example
 print("Hello, World!")  # This is a comment
 
-#%% Example
+# %% Example
 # print("Hello, World!")
 print("Cheers, Mate!")
 
 
 # Multi Line Comments
 
-#%% Example
+# %% Example
 # This is a comment
 # written in
 # more than just one line
 print("Hello, World!")
 
-#%% Example
+# %% Example
 """
 This is a comment
 written in
