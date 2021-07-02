@@ -1,3 +1,5 @@
+# region Comments
+
 # Creating a Comment
 
 # %% Example
@@ -27,3 +29,5 @@ written in
 more than just one line
 """
 print("Hello, World!")
+
+# endregion
