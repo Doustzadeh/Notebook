@@ -254,3 +254,49 @@ txt = "\x48\x65\x6c\x6c\x6f"
 print(txt) 
 
 # endregion
+
+
+# region String Methods
+
+# Note: All string methods returns new values. They do not change the original string.
+
+
+# String capitalize() Method
+# The capitalize() method returns a string where the first character is upper case.
+
+# %% Example
+# Upper case the first letter in this sentence:
+txt = "hello, and welcome to my world."
+x = txt.capitalize()
+print (x)
+# Out: Hello, and welcome to my world.
+
+
+# String casefold() Method
+# The casefold() method returns a string where all the characters are lower case.
+
+# %% Example
+# Make the string lower case:
+txt = "Hello, And Welcome To My World!"
+x = txt.casefold()
+print(x)
+# Out: hello, and welcome to my world!
+
+
+# String center() Method
+# The center() method will center align the string, using a specified character (space is default) as the fill character.
+
+# %% Example
+# Print the word "banana", taking up the space of 20 characters, with "banana" in the middle:
+txt = "banana"
+x = txt.center(20)
+print(x)
+# Out:        banana
+
+# %% Example
+txt = "banana"
+x = txt.center(20, "O")
+print(x)
+# Out: OOOOOOObananaOOOOOOO
+
+# endregion
