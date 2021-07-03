@@ -1,3 +1,5 @@
+# region Variables
+
 # Creating Variables
 
 # %% Example
@@ -7,8 +9,8 @@ print(x)
 print(y)
 
 # %% Example
-x = 4       # x is of type int
-x = "Sally" # x is now of type str
+x = 4        # x is of type int
+x = "Sally"  # x is now of type str
 print(x)
 
 
@@ -45,6 +47,10 @@ a = 4
 A = "Sally"
 # A will not overwrite a
 
+# endregion
+
+
+# region Variable Names
 
 #  Variable Names
 
@@ -72,6 +78,10 @@ MyVariableName = "John"
 # Each word is separated by an underscore character:
 my_variable_name = "John"
 
+# endregion
+
+
+# region Variables - Assign Multiple Values
 
 # Many Values to Multiple Variables
 
@@ -101,6 +111,10 @@ print(x)
 print(y)
 print(z)
 
+# endregion
+
+
+# region Output Variables
 
 # Output Variables
 
@@ -111,7 +125,7 @@ print("Python is " + x)
 # %% Example
 x = "Python is "
 y = "awesome"
-z =  x + y
+z = x + y
 print(z)
 
 # %% Example
@@ -119,6 +133,10 @@ x = 5
 y = 10
 print(x + y)
 
+# endregion
+
+
+# region Global Variables
 
 # Global Variables
 
@@ -126,7 +144,7 @@ print(x + y)
 x = "awesome"
 
 def myfunc():
-  print("Python is " + x)
+    print("Python is " + x)
 
 myfunc()
 
@@ -134,8 +152,8 @@ myfunc()
 x = "awesome"
 
 def myfunc():
-  x = "fantastic"
-  print("Python is " + x)
+    x = "fantastic"
+    print("Python is " + x)
 
 myfunc()
 
@@ -146,8 +164,8 @@ print("Python is " + x)
 
 # %% Example
 def myfunc():
-  global x
-  x = "fantastic"
+    global x
+    x = "fantastic"
 
 myfunc()
 
@@ -157,9 +175,11 @@ print("Python is " + x)
 x = "awesome"
 
 def myfunc():
-  global x
-  x = "fantastic"
+    global x
+    x = "fantastic"
 
 myfunc()
 
 print("Python is " + x)
+
+# endregion
