@@ -133,7 +133,7 @@ print(a.lower())
 # %% Example
 # The strip() method removes any whitespace from the beginning or the end:
 a = " Hello, World! "
-print(a.strip()) # returns "Hello, World!"
+print(a.strip())  # returns "Hello, World!"
 
 
 # Replace String
@@ -149,7 +149,7 @@ print(a.replace("H", "J"))
 # %% Example
 # The split() method splits the string into substrings if it finds instances of the separator:
 a = "Hello, World!"
-print(a.split(",")) # returns ['Hello', ' World!']
+print(a.split(","))  # returns ['Hello', ' World!']
 
 # endregion
 
@@ -298,5 +298,299 @@ txt = "banana"
 x = txt.center(20, "O")
 print(x)
 # Out: OOOOOOObananaOOOOOOO
+
+
+# String count() Method
+# The count() method returns the number of times a specified value appears in the string.
+
+# %% Example
+# Return the number of times the value "apple" appears in the string:
+txt = "I love apples, apple are my favorite fruit"
+x = txt.count("apple")
+print(x)
+# Out: 2
+
+# %% Example
+# Search from position 10 to 24:
+txt = "I love apples, apple are my favorite fruit"
+x = txt.count("apple", 10, 24)
+print(x)
+# Out: 1
+
+
+# String encode() Method
+# The encode() method encodes the string, using the specified encoding. 
+# If no encoding is specified, UTF-8 will be used.
+
+# %% Example
+# UTF-8 encode the string:
+txt = "My name is Ståle"
+x = txt.encode()
+print(x)
+# Out: b'My name is St\xc3\xa5le'
+
+# %% Example
+# These examples uses ascii encoding, and a character that cannot be encoded, showing the result with different errors:
+txt = "My name is Ståle"
+print(txt.encode(encoding="ascii",errors="backslashreplace"))
+# Out: b'My name is St\\xe5le'
+print(txt.encode(encoding="ascii",errors="ignore"))
+# Out: b'My name is Stle'
+print(txt.encode(encoding="ascii",errors="namereplace"))
+# Out: b'My name is St\\N{LATIN SMALL LETTER A WITH RING ABOVE}le'
+print(txt.encode(encoding="ascii",errors="replace"))
+# Out: b'My name is St?le'
+print(txt.encode(encoding="ascii",errors="xmlcharrefreplace"))
+# Out: b'My name is St&#229;le'
+
+
+# String endswith() Method
+# The endswith() method returns True if the string ends with the specified value, otherwise False.
+
+# %% Example
+# Check if the string ends with a punctuation sign (.):
+txt = "Hello, welcome to my world."
+x = txt.endswith(".")
+print(x)
+# Out: True
+
+# %% Example
+# Check if the string ends with the phrase "my world.":
+txt = "Hello, welcome to my world."
+x = txt.endswith("my world.")
+print(x)
+# Out: True
+
+# %% Example
+# Check if position 5 to 11 ends with the phrase "my world.":
+txt = "Hello, welcome to my world."
+x = txt.endswith("my world.", 5, 11)
+print(x)
+# Out: False
+
+
+# String expandtabs() Method
+# The expandtabs() method sets the tab size to the specified number of whitespaces.
+
+# %% Example
+# Set the tab size to 2 whitespaces:
+txt = "H\te\tl\tl\to"
+x = txt.expandtabs(2)
+print(x)
+# Out: H e l l o
+
+# %% Example
+# See the result using different tab sizes:
+txt = "H\te\tl\tl\to"
+print(txt)
+# Out: H	e	l	l	o
+print(txt.expandtabs())
+# Out: H	e	l	l	o
+print(txt.expandtabs(2))
+# Out: H e l l o
+print(txt.expandtabs(4))
+# Out: H   e   l   l   o
+print(txt.expandtabs(10))
+# Out: H         e         l         l         o
+
+
+# String find() Method
+# The find() method finds the first occurrence of the specified value.
+# The find() method returns -1 if the value is not found.
+# The find() method is almost the same as the index() method, 
+# the only difference is that the index() method raises an exception if the value is not found.
+
+# %% Example
+# Where in the text is the word "welcome"?:
+txt = "Hello, welcome to my world."
+x = txt.find("welcome")
+print(x)
+# Out: 7
+
+# %% Example
+# Where in the text is the first occurrence of the letter "e"?:
+txt = "Hello, welcome to my world."
+x = txt.find("e")
+print(x)
+# Out: 1
+
+# %% Example
+# Where in the text is the first occurrence of the letter "e" when you only search between position 5 and 10?:
+txt = "Hello, welcome to my world."
+x = txt.find("e", 5, 10)
+print(x)
+# Out: 8
+
+# %% Example
+# If the value is not found, the find() method returns -1, but the index() method will raise an exception:
+txt = "Hello, welcome to my world."
+print(txt.find("q"))
+# Out: -1
+print(txt.index("q"))
+# Out: ValueError: substring not found
+
+
+# String format() Method
+# The format() method formats the specified value(s) and insert them inside the string's placeholder.
+# The format() method returns the formatted string.
+
+# %% Example
+# Insert the price inside the placeholder, the price should be in fixed point, two-decimal format:
+txt = "For only {price:.2f} dollars!"
+print(txt.format(price = 49))
+# Out: For only 49.00 dollars!
+
+# %% Example
+txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
+print(txt1)
+# Out: My name is John, I'm 36
+txt2 = "My name is {0}, I'm {1}".format("John",36)
+print(txt2)
+# Out: My name is John, I'm 36
+txt3 = "My name is {}, I'm {}".format("John",36)
+print(txt3)
+# Out: My name is John, I'm 36
+
+# %% Example
+# :<  Left aligns the result (within the available space)
+txt = "We have {:<8} chickens."
+print(txt.format(49))
+# Out: We have 49       chickens.
+
+# %% Example
+# :>  Right aligns the result (within the available space)
+txt = "We have {:>8} chickens."
+print(txt.format(49))
+# Out: We have       49 chickens.
+
+# %% Example
+# :^  Center aligns the result (within the available space)
+txt = "We have {:^8} chickens."
+print(txt.format(49))
+# Out: We have    49    chickens.
+
+# %% Example
+# :=  Places the sign to the left most position
+txt = "The temperature is {:=8} degrees celsius."
+print(txt.format(-5))
+# Out: The temperature is -      5 degrees celsius.
+
+# %% Example
+# :+  Use a plus sign to indicate if the result is positive or negative
+txt = "The temperature is between {:+} and {:+} degrees celsius."
+print(txt.format(-3, 7))
+# Out: The temperature is between -3 and +7 degrees celsius.
+
+# %% Example
+# :-  Use a minus sign for negative values only
+txt = "The temperature is between {:-} and {:-} degrees celsius."
+print(txt.format(-3, 7))
+# Out: The temperature is between -3 and 7 degrees celsius.
+
+# %% Example
+# :  Use a space to insert an extra space before positive numbers (and a minus sign before negative numbers)
+txt = "The temperature is between {: } and {: } degrees celsius."
+print(txt.format(-3, 7))
+# Out: The temperature is between -3 and  7 degrees celsius.
+
+# %% Example
+# :,  Use a comma as a thousand separator
+txt = "The universe is {:,} years old."
+print(txt.format(13800000000))
+# Out: The universe is 13,800,000,000 years old.
+
+# %% Example
+# :_  Use a underscore as a thousand separator
+txt = "The universe is {:_} years old."
+print(txt.format(13800000000))
+# Out: The universe is 13_800_000_000 years old.
+
+# %% Example
+# :b  Binary format
+txt = "The binary version of {0} is {0:b}"
+print(txt.format(5))
+# Out: The binary version of 5 is 101
+
+# %% Example
+# :c  Converts the value into the corresponding unicode character
+
+# %% Example
+# :d  Decimal format
+txt = "We have {:d} chickens."
+print(txt.format(0b101))
+# Out: We have 5 chickens.
+
+# %% Example
+# :e  Scientific format, with a lower case e
+txt = "We have {:e} chickens."
+print(txt.format(5))
+# Out: We have 5.000000e+00 chickens.
+
+# %% Example
+# :E  Scientific format, with an upper case E
+txt = "We have {:E} chickens."
+print(txt.format(5))
+# Out: We have 5.000000E+00 chickens.
+
+# %% Example
+# :f  Fix point number format
+txt = "The price is {:.2f} dollars."
+print(txt.format(45))
+# Out: The price is 45.00 dollars.
+txt = "The price is {:f} dollars."
+print(txt.format(45))
+# Out: The price is 45.000000 dollars.
+
+# %% Example
+# :F  Fix point number format, in uppercase format (show inf and nan as INF and NAN)
+x = float('inf')
+
+txt = "The price is {:F} dollars."
+print(txt.format(x))
+# Out: The price is INF dollars.
+txt = "The price is {:f} dollars."
+print(txt.format(x))
+# Out: The price is inf dollars.
+
+# %% Example
+# :g  General format
+
+# %% Example
+# :G  General format (using a upper case E for scientific notations)
+
+# %% Example
+# :o  Octal format
+txt = "The octal version of {0} is {0:o}"
+print(txt.format(10))
+# Out: The octal version of 10 is 12
+
+# %% Example
+# :x  Hex format, lower case
+txt = "The Hexadecimal version of {0} is {0:x}"
+print(txt.format(255))
+# Out: The Hexadecimal version of 255 is ff
+
+# %% Example
+# :X  Hex format, upper case
+txt = "The Hexadecimal version of {0} is {0:X}"
+print(txt.format(255))
+# Out: The Hexadecimal version of 255 is FF
+
+# %% Example
+# :n  Number format
+
+# %% Example
+# :%  Percentage format
+txt = "You scored {:%}"
+print(txt.format(0.25))
+# Out: You scored 25.000000%
+txt = "You scored {:.0%}"
+print(txt.format(0.25))
+# Out: You scored 25%
+
+
+# String format_map() Method
+# Formats specified values in a string
+
 
 # endregion
