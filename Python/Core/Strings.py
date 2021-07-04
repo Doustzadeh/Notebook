@@ -1180,4 +1180,105 @@ x = txt.rstrip(",.qsw")
 print(x)
 # Out: banana
 
+
+# String split() Method
+# The split() method splits a string into a list.
+# You can specify the separator, default separator is any whitespace.
+# Note: When maxsplit is specified, the list will contain the specified number of elements plus one.
+
+# %% Example
+# Split a string into a list where each word is a list item:
+txt = "welcome to the jungle"
+x = txt.split()
+print(x)
+# Out: ['welcome', 'to', 'the', 'jungle']
+
+# %% Example
+# Split the string, using comma, followed by a space, as a separator:
+txt = "hello, my name is Peter, I am 26 years old"
+x = txt.split(", ")
+print(x)
+# Out: ['hello', 'my name is Peter', 'I am 26 years old']
+
+# %% Example
+# Use a hash character as a separator:
+txt = "apple#banana#cherry#orange"
+x = txt.split("#")
+print(x)
+# Out: ['apple', 'banana', 'cherry', 'orange']
+
+# %% Example
+# Split the string into a list with max 2 items:
+txt = "apple#banana#cherry#orange"
+# setting the maxsplit parameter to 1, will return a list with 2 elements!
+x = txt.split("#", 1)
+print(x)
+# Out: ['apple', 'banana#cherry#orange']
+
+
+# String splitlines() Method
+# The splitlines() method splits a string into a list. The splitting is done at line breaks.
+
+# %% Example
+# Split a string into a list where each line is a list item:
+txt = "Thank you for the music\nWelcome to the jungle"
+x = txt.splitlines()
+print(x)
+# Out: ['Thank you for the music', 'Welcome to the jungle']
+
+# %% Example
+# Split the string, but keep the line breaks:
+txt = "Thank you for the music\nWelcome to the jungle"
+x = txt.splitlines(True)
+print(x)
+# Out: ['Thank you for the music\n', 'Welcome to the jungle']
+
+
+# String startswith() Method
+# The startswith() method returns True if the string starts with the specified value, otherwise False.
+
+# %% Example
+# Check if the string starts with "Hello":
+txt = "Hello, welcome to my world."
+x = txt.startswith("Hello")
+print(x)
+# Out: True
+
+# %% Example
+# Check if position 7 to 20 starts with the characters "wel":
+txt = "Hello, welcome to my world."
+x = txt.startswith("wel", 7, 20)
+print(x)
+# Out: True
+
+
+# String strip() Method
+# The strip() method removes any leading (spaces at the beginning) and 
+# trailing (spaces at the end) characters (space is the default leading character to remove)
+
+# %% Example
+# Remove spaces at the beginning and at the end of the string:
+txt = "     banana     "
+x = txt.strip()
+print("of all fruits", x, "is my favorite")
+# Out: of all fruits banana is my favorite
+
+# %% Example
+# Remove the leading and trailing characters:
+txt = ",,,,,rrttgg.....banana....rrr"
+x = txt.strip(",.grt")
+print(x)
+# Out: banana
+
+
+# String swapcase() Method
+# The swapcase() method returns a string where all the upper case letters are lower case and vice versa.
+
+# %% Example
+# Make the lower case letters upper case and the upper case letters lower case:
+txt = "Hello My Name Is PETER"
+x = txt.swapcase()
+print(x)
+# Out: hELLO mY nAME iS peter
+
 # endregion
