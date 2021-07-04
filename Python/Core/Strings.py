@@ -1035,7 +1035,7 @@ print(x)
 # String rfind() Method
 # The rfind() method finds the last occurrence of the specified value.
 # The rfind() method returns -1 if the value is not found.
-# The rfind() method is almost the same as the rindex() method. See example below.
+# The rfind() method is almost the same as the rindex() method.
 
 # %% Example
 # Where in the text is the last occurrence of the string "casa"?:
@@ -1066,5 +1066,118 @@ print(txt.rfind("q"))
 # Out: -1
 print(txt.rindex("q"))
 # Out: ValueError: substring not found
+
+
+# String rindex() Method
+# The rindex() method finds the last occurrence of the specified value.
+# The rindex() method raises an exception if the value is not found.
+# The rindex() method is almost the same as the rfind() method.
+
+# %% Example
+# Where in the text is the last occurrence of the string "casa"?:
+txt = "Mi casa, su casa."
+x = txt.rindex("casa")
+print(x)
+# Out: 12
+
+# %% Example
+# Where in the text is the last occurrence of the letter "e"?:
+txt = "Hello, welcome to my world."
+x = txt.rindex("e")
+print(x)
+# Out: 13
+
+# %% Example
+# Where in the text is the last occurrence of the letter "e" when you only search between position 5 and 10?:
+txt = "Hello, welcome to my world."
+x = txt.rindex("e", 5, 10)
+print(x)
+# Out: 8
+
+# %% Example
+# If the value is not found, the rfind() method returns -1, but the rindex() method will raise an exception:
+txt = "Hello, welcome to my world."
+
+print(txt.rfind("q"))
+# Out: -1
+print(txt.rindex("q"))
+# Out: ValueError: substring not found
+
+
+# String rjust() Method
+# The rjust() method will right align the string, using a specified character (space is default) as the fill character.
+
+# %% Example
+# Return a 20 characters long, right justified version of the word "banana":
+txt = "banana"
+x = txt.rjust(20)
+print(x, "is my favorite fruit.")
+# Out:               banana is my favorite fruit.
+
+# %% Example
+# Using the letter "O" as the padding character:
+txt = "banana"
+x = txt.rjust(20, "O")
+print(x)
+# Out: OOOOOOOOOOOOOObanana
+
+
+# String rpartition() Method
+# The rpartition() method searches for the last occurrence of a specified string, and splits the string into a tuple containing three elements.
+# The first element contains the part before the specified string.
+# The second element contains the specified string.
+# The third element contains the part after the string.
+
+# %% Example
+txt = "I could eat bananas all day, bananas are my favorite fruit"
+x = txt.rpartition("bananas")
+print(x)
+# Out: ('I could eat bananas all day, ', 'bananas', ' are my favorite fruit')
+
+# %% Example
+txt = "I could eat bananas all day, bananas are my favorite fruit"
+x = txt.rpartition("apples")
+print(x) 
+# Out: ('', '', 'I could eat bananas all day, bananas are my favorite fruit')
+
+
+# String rsplit() Method
+# The rsplit() method splits a string into a list, starting from the right.
+# If no "max" is specified, this method will return the same as the split() method.
+# Note: When maxsplit is specified, the list will contain the specified number of elements plus one.
+
+# %% Example
+# Split a string into a list, using comma, followed by a space (, ) as the separator:
+txt = "apple, banana, cherry"
+x = txt.rsplit(", ")
+print(x)
+# Out: ['apple', 'banana', 'cherry']
+
+# %% Example
+# Split the string into a list with maximum 2 items:
+txt = "apple, banana, cherry"
+# setting the maxsplit parameter to 1, will return a list with 2 elements!
+x = txt.rsplit(", ", 1)
+print(x)
+# Out: ['apple, banana', 'cherry']
+
+
+# String rstrip() Method
+# The rstrip() method removes any trailing characters (characters at the end a string), 
+# space is the default trailing character to remove.
+
+# %% Example
+# Remove any white spaces at the end of the string:
+txt = "     banana     "
+x = txt.rstrip()
+print("of all fruits", x, "is my favorite")
+# Out: of all fruits      banana is my favorite
+
+# %% Example
+# Remove the trailing characters if they are commas, s, q, or w:
+txt = "banana,,,,,ssqqqww....."
+x = txt.rstrip(",.qsw")
+print(x)
+# Out: banana
 
 # endregion
