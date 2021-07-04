@@ -761,4 +761,102 @@ print(b.islower())
 print(c.islower())
 # Out: False
 
+
+# String isnumeric() Method
+# The isnumeric() method returns True if all the characters are numeric (0-9), otherwise False.
+# Exponents, like ² and ¾ are also considered to be numeric values.
+# "-1" and "1.5" are NOT considered numeric values, because all the characters in the string must be numeric, and the - and the . are not.
+
+# %% Example
+# Check if all the characters in the text are numeric:
+txt = "565543"
+x = txt.isnumeric()
+print(x)
+# Out: True
+
+# %% Example
+# Check if the characters are numeric:
+a = "\u0030" #unicode for 0
+b = "\u00B2" #unicode for &sup2;
+c = "10km2"
+d = "-1"
+e = "1.5"
+
+print(a.isnumeric())
+# Out: True
+print(b.isnumeric())
+# Out: True
+print(c.isnumeric())
+# Out: False
+print(d.isnumeric())
+# Out: False
+print(e.isnumeric())
+# Out: False
+
+
+# String isprintable() Method
+# The isprintable() method returns True if all the characters are printable, otherwise False.
+
+# %% Example
+# Check if all the characters in the text are printable:
+txt = "Hello! Are you #1?"
+x = txt.isprintable()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the text are printable:
+txt = "Hello!\nAre you #1?"
+x = txt.isprintable()
+print(x)
+# Out: False
+
+
+# String isspace() Method
+# The isspace() method returns True if all the characters in a string are whitespaces, otherwise False.
+
+# %% Example
+# Check if all the characters in the text are whitespaces:
+txt = "   "
+x = txt.isspace()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the text are whitespaces:
+txt = "   s   "
+x = txt.isspace()
+print(x)
+# Out: False
+
+
+# String istitle() Method
+# The istitle() method returns True if all words in a text start with a upper case letter, 
+# AND the rest of the word are lower case letters, otherwise False.
+# Symbols and numbers are ignored.
+
+# %% Example
+# Check if each word start with an upper case letter:
+txt = "Hello, And Welcome To My World!"
+x = txt.istitle()
+print(x)
+# Out: True
+
+# %% Example
+# Check if each word start with an upper case letter:
+
+a = "HELLO, AND WELCOME TO MY WORLD"
+b = "Hello"
+c = "22 Names"
+d = "This Is %'!?"
+
+print(a.istitle())
+# Out: False
+print(b.istitle())
+# Out: True
+print(c.istitle())
+# Out: True
+print(d.istitle())
+# Out: True
+
 # endregion
