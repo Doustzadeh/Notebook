@@ -647,4 +647,118 @@ x = txt.isalnum()
 print(x)
 # Out: False
 
+
+# String isalpha() Method
+# The isalpha() method returns True if all the characters are alphabet letters (a-z).
+
+# %% Example
+# Check if all the characters in the text are letters:
+txt = "CompanyX"
+x = txt.isalpha()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the text is alphabetic:
+txt = "Company10"
+x = txt.isalpha()
+print(x)
+# Out: False
+
+
+# String isdecimal() Method
+# The isdecimal() method returns True if all the characters are decimals (0-9).
+
+# %% Example
+# Check if all the characters in the unicode object are decimals:
+txt = "\u0033" #unicode for 3
+x = txt.isdecimal()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the unicode are decimals:
+a = "\u0030" #unicode for 0
+b = "\u0047" #unicode for G
+
+print(a.isdecimal())
+# Out: True
+print(b.isdecimal())
+# Out: False
+
+
+# String isdigit() Method
+# The isdigit() method returns True if all the characters are digits, otherwise False.
+
+# %% Example
+# Check if all the characters in the text are digits:
+txt = "50800"
+x = txt.isdigit()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the text are digits:
+a = "\u0030" #unicode for 0
+b = "\u00B2" #unicode for ²
+
+print(a.isdigit())
+# Out: True
+print(b.isdigit())
+# Out: True
+
+
+# String isidentifier() Method
+# The isidentifier() method returns True if the string is a valid identifier, otherwise False.
+# A string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_). 
+# A valid identifier cannot start with a number, or contain any spaces.
+
+# %% Example
+# Check if the string is a valid identifier:
+txt = "Demo"
+x = txt.isidentifier()
+print(x)
+# Out: True
+
+# %% Example
+# Check if the strings are valid identifiers:
+a = "MyFolder"
+b = "Demo002"
+c = "2bring"
+d = "my demo"
+
+print(a.isidentifier())
+# Out: True
+print(b.isidentifier())
+# Out: True
+print(c.isidentifier())
+# Out: False
+print(d.isidentifier())
+# Out: False
+
+
+# String islower() Method
+# The islower() method returns True if all the characters are in lower case, otherwise False.
+# Numbers, symbols and spaces are not checked, only alphabet characters.
+
+# %% Example
+# Check if all the characters in the text are in lower case:
+txt = "hello world!"
+x = txt.islower()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the texts are in lower case:
+a = "Hello world!"
+b = "hello 123"
+c = "mynameisPeter"
+
+print(a.islower())
+# Out: False
+print(b.islower())
+# Out: True
+print(c.islower())
+# Out: False
+
 # endregion
