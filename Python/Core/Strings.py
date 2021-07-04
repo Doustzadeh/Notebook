@@ -844,7 +844,6 @@ print(x)
 
 # %% Example
 # Check if each word start with an upper case letter:
-
 a = "HELLO, AND WELCOME TO MY WORLD"
 b = "Hello"
 c = "22 Names"
@@ -858,5 +857,97 @@ print(c.istitle())
 # Out: True
 print(d.istitle())
 # Out: True
+
+
+# String isupper() Method
+# The isupper() method returns True if all the characters are in upper case, otherwise False.
+# Numbers, symbols and spaces are not checked, only alphabet characters.
+
+# %% Example
+# Check if all the characters in the text are in upper case:
+txt = "THIS IS NOW!"
+x = txt.isupper()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the texts are in upper case:
+a = "Hello World!"
+b = "hello 123"
+c = "MY NAME IS PETER"
+
+print(a.isupper())
+# Out: False
+print(b.isupper())
+# Out: False
+print(c.isupper())
+# Out: True
+
+
+# String join() Method
+# The join() method takes all items in an iterable and joins them into one string.
+# A string must be specified as the separator.
+
+# %% Example
+# Join all items in a tuple into a string, using a hash character as separator:
+myTuple = ("John", "Peter", "Vicky")
+x = "#".join(myTuple)
+print(x)
+# Out: John#Peter#Vicky
+
+# %% Example
+# myDict = {"name": "John", "country": "Norway"}
+mySeparator = "TEST"
+x = mySeparator.join(myDict)
+print(x)
+# Out: NameError: name 'myDict' is not defined
+
+
+# String ljust() Method
+# The ljust() method will left align the string, using a specified character (space is default) as the fill character.
+
+# %% Example
+# Return a 20 characters long, left justified version of the word "banana":
+txt = "banana"
+x = txt.ljust(20)
+print(x, "is my favorite fruit.")
+# Out: banana               is my favorite fruit.
+
+# %% Example
+# Using the letter "O" as the padding character:
+txt = "banana"
+x = txt.ljust(20, "O")
+print(x)
+# Out: bananaOOOOOOOOOOOOOO
+
+
+# String lower() Method
+# The lower() method returns a string where all characters are lower case.
+# Symbols and Numbers are ignored.
+
+# %% Example
+# Lower case the string:
+txt = "Hello my FRIENDS"
+x = txt.lower()
+print(x)
+# Out: hello my friends
+
+
+# String lstrip() Method
+# The lstrip() method removes any leading characters (space is the default leading character to remove)
+
+# %% Example
+# Remove spaces to the left of the string:
+txt = "     banana     "
+x = txt.lstrip()
+print("of all fruits", x, "is my favorite")
+# Out: of all fruits banana      is my favorite
+
+# %% Example
+# Remove the leading characters:
+txt = ",,,,,ssaaww.....banana"
+x = txt.lstrip(",.asw")
+print(x)
+# Out: banana
 
 # endregion
