@@ -950,4 +950,121 @@ x = txt.lstrip(",.asw")
 print(x)
 # Out: banana
 
+
+# String maketrans() Method
+# The maketrans() method returns a mapping table that can be used with the translate() 
+# method to replace specified characters.
+
+# %% Example
+txt = "Hello Sam!"
+mytable = txt.maketrans("S", "P")
+print(txt.translate(mytable))
+# Out: Hello Pam!
+
+# %% Example
+txt = "Hi Sam!"
+x = "mSa"
+y = "eJo"
+mytable = txt.maketrans(x, y)
+print(txt.translate(mytable)) 
+# Out: Hi Joe!
+
+# %% Example
+# The third parameter in the mapping table describes characters that you want to remove from the string:
+txt = "Good night Sam!"
+x = "mSa"
+y = "eJo"
+z = "odnght"
+mytable = txt.maketrans(x, y, z)
+print(txt.translate(mytable))
+# Out: G i Joe!
+
+# %% Example
+txt = "Good night Sam!"
+x = "mSa"
+y = "eJo"
+z = "odnght"
+print(txt.maketrans(x, y, z))
+# Out: {109: 101, 83: 74, 97: 111, 111: None, 100: None, 110: None, 103: None, 104: None, 116: None}
+
+
+# String partition() Method
+# The partition() method searches for a specified string, and splits the string into a tuple containing three elements.
+# The first element contains the part before the specified string.
+# The second element contains the specified string.
+# The third element contains the part after the string.
+
+# %% Example
+txt = "I could eat bananas all day"
+x = txt.partition("bananas")
+print(x) 
+# Out: ('I could eat ', 'bananas', ' all day')
+
+# %% Example
+txt = "I could eat bananas all day"
+x = txt.partition("apples")
+print(x)
+# Out: ('I could eat bananas all day', '', '')
+
+
+# String replace() Method
+# The replace() method replaces a specified phrase with another specified phrase.
+
+# %% Example
+# Replace the word "bananas":
+txt = "I like bananas"
+x = txt.replace("bananas", "apples")
+print(x)
+# Out: I like apples
+
+# %% Example
+# Replace all occurrence of the word "one":
+txt = "one one was a race horse, two two was one too."
+x = txt.replace("one", "three")
+print(x)
+# Out: three three was a race horse, two two was three too.
+
+# %% Example
+# Replace the two first occurrence of the word "one":
+txt = "one one was a race horse, two two was one too."
+x = txt.replace("one", "three", 2)
+print(x)
+# Out: three three was a race horse, two two was one too.
+
+
+# String rfind() Method
+# The rfind() method finds the last occurrence of the specified value.
+# The rfind() method returns -1 if the value is not found.
+# The rfind() method is almost the same as the rindex() method. See example below.
+
+# %% Example
+# Where in the text is the last occurrence of the string "casa"?:
+txt = "Mi casa, su casa."
+x = txt.rfind("casa")
+print(x)
+# Out: 12
+
+# %% Example
+# Where in the text is the last occurrence of the letter "e"?:
+txt = "Hello, welcome to my world."
+x = txt.rfind("e")
+print(x)
+# Out: 13
+
+# %% Example
+# Where in the text is the last occurrence of the letter "e" when you only search between position 5 and 10?:
+txt = "Hello, welcome to my world."
+x = txt.rfind("e", 5, 10)
+print(x)
+# Out: 8
+
+# %% Example
+# If the value is not found, the rfind() method returns -1, but the rindex() method will raise an exception:
+txt = "Hello, welcome to my world."
+
+print(txt.rfind("q"))
+# Out: -1
+print(txt.rindex("q"))
+# Out: ValueError: substring not found
+
 # endregion
