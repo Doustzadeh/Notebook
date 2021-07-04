@@ -1281,4 +1281,115 @@ x = txt.swapcase()
 print(x)
 # Out: hELLO mY nAME iS peter
 
+
+# String title() Method
+# The title() method returns a string where the first character in every word is upper case. Like a header, or a title.
+# If the word contains a number or a symbol, the first letter after that will be converted to upper case.
+
+# %% Example
+# Make the first letter in each word upper case:
+txt = "Welcome to my world"
+x = txt.title()
+print(x)
+# Out: Welcome To My World
+
+# %% Example
+txt = "Welcome to my 2nd world"
+x = txt.title()
+print(x)
+# Out: Welcome To My 2Nd World
+
+# %% Example
+# Note that the first letter after a non-alphabet letter is converted into a upper case letter:
+txt = "hello b2b2b2 and 3g3g3g"
+x = txt.title()
+print(x)
+# Out: Hello B2B2B2 And 3G3G3G
+
+
+# String translate() Method
+# The translate() method returns a string where some specified characters are replaced with the character described in a dictionary, or in a mapping table.
+# Use the maketrans() method to create a mapping table.
+# If a character is not specified in the dictionary/table, the character will not be replaced.
+# If you use a dictionary, you must use ascii codes instead of characters.
+
+# %% Example
+# Replace any "S" characters with a "P" character:
+
+#use a dictionary with ascii codes to replace 83 (S) with 80 (P):
+mydict = {83:  80}
+txt = "Hello Sam!"
+print(txt.translate(mydict))
+# Out: Hello Pam!
+
+# %% Example
+# Use a mapping table to replace "S" with "P":
+txt = "Hello Sam!"
+mytable = txt.maketrans("S", "P")
+print(txt.translate(mytable))
+# Out: Hello Pam!
+
+# %% Example
+# Use a mapping table to replace many characters:
+txt = "Hi Sam!"
+x = "mSa"
+y = "eJo"
+mytable = txt.maketrans(x, y)
+print(txt.translate(mytable))
+# Out: Hi Joe!
+
+# %% Example
+# The third parameter in the mapping table describes characters that you want to remove from the string:
+txt = "Good night Sam!"
+x = "mSa"
+y = "eJo"
+z = "odnght"
+mytable = txt.maketrans(x, y, z)
+print(txt.translate(mytable))
+# Out: G i Joe!
+
+# %% Example
+# The same example as above, but using a dictionary instead of a mapping table:
+txt = "Good night Sam!"
+mydict = {109: 101, 83: 74, 97: 111, 111: None, 100: None, 110: None, 103: None, 104: None, 116: None}
+print(txt.translate(mydict))
+# Out: G i Joe!
+
+
+# String upper() Method
+# The upper() method returns a string where all characters are in upper case.
+# Symbols and Numbers are ignored.
+
+# %% Example
+# Upper case the string:
+txt = "Hello my friends"
+x = txt.upper()
+print(x)
+# Out: HELLO MY FRIENDS
+
+
+# String zfill() Method
+# The zfill() method adds zeros (0) at the beginning of the string, until it reaches the specified length.
+# If the value of the len parameter is less than the length of the string, no filling is done.
+
+# %% Example
+# Fill the string with zeros until it is 10 characters long:
+txt = "50"
+x = txt.zfill(10)
+print(x)
+# Out: 0000000050
+
+# %% Example
+# Fill the strings with zeros until they are 10 characters long:
+a = "hello"
+b = "welcome to the jungle"
+c = "10.000"
+
+print(a.zfill(10))
+# Out: 00000hello
+print(b.zfill(10))
+# Out: welcome to the jungle
+print(c.zfill(10))
+# Out: 000010.000
+
 # endregion
