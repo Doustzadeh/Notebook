@@ -593,4 +593,58 @@ print(txt.format(0.25))
 # Formats specified values in a string
 
 
+# String index() Method
+# The index() method finds the first occurrence of the specified value.
+# The index() method raises an exception if the value is not found.
+# The index() method is almost the same as the find() method, 
+# the only difference is that the find() method returns -1 if the value is not found.
+
+# %% Example
+# Where in the text is the word "welcome"?:
+txt = "Hello, welcome to my world."
+x = txt.index("welcome")
+print(x)
+# Out: 7
+
+# %% Example
+# Where in the text is the first occurrence of the letter "e"?:
+txt = "Hello, welcome to my world."
+x = txt.index("e")
+print(x)
+# Out: 1
+
+# %% Example
+# Where in the text is the first occurrence of the letter "e" when you only search between position 5 and 10?:
+txt = "Hello, welcome to my world."
+x = txt.index("e", 5, 10)
+print(x)
+# Out: 8
+
+# %% Example
+# If the value is not found, the find() method returns -1, but the index() method will raise an exception:
+txt = "Hello, welcome to my world."
+print(txt.find("q"))
+# Out: -1
+print(txt.index("q"))
+# Out: ValueError: substring not found
+
+
+# String isalnum() Method
+# The isalnum() method returns True if all the characters are alphanumeric, 
+# meaning alphabet letter (a-z) and numbers (0-9).
+
+# %% Example
+# Check if all the characters in the text are alphanumeric:
+txt = "Company12"
+x = txt.isalnum()
+print(x)
+# Out: True
+
+# %% Example
+# Check if all the characters in the text is alphanumeric:
+txt = "Company 12"
+x = txt.isalnum()
+print(x)
+# Out: False
+
 # endregion
