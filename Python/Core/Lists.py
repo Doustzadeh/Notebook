@@ -173,3 +173,49 @@ print(thislist)
 # Out: ['apple', 'banana', 'watermelon', 'cherry']
 
 # endregion
+
+
+# region Add List Items
+
+# Append Items
+
+# %% Example
+# Using the append() method to append an item:
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+# Out: ['apple', 'banana', 'cherry', 'orange']
+
+
+# Insert Items
+
+# %% Example
+# Insert an item as the second position:
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+# Out: ['apple', 'orange', 'banana', 'cherry']
+
+
+# Extend List
+
+# %% Example
+# Add the elements of tropical to thislist:
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+# Out: ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+
+# Add Any Iterable
+
+# %% Example
+# Add elements of a tuple to a list:
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+# Out: ['apple', 'banana', 'cherry', 'kiwi', 'orange']
+
+# endregion
