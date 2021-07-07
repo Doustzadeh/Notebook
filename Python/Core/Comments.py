@@ -1,5 +1,6 @@
 # region Comments
 
+# ---------------------------------------------------------
 # Creating a Comment
 
 # %% Example
@@ -14,6 +15,7 @@ print("Hello, World!")  # This is a comment
 print("Cheers, Mate!")
 
 
+# ---------------------------------------------------------
 # Multi Line Comments
 
 # %% Example
