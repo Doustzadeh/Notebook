@@ -327,3 +327,78 @@ thislist = ["apple", "banana", "cherry"]
 #      cherry
 
 # endregion
+
+
+# region List Comprehension
+
+# List Comprehension
+
+# %% Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+# Out: ['apple', 'banana', 'mango']
+
+# %% Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+# Out: ['apple', 'banana', 'mango']
+
+
+# Condition
+
+# %% Example
+# Only accept items that are not "apple":
+newlist = [x for x in fruits if x != "apple"]
+print(newlist)
+# Out: ['banana', 'cherry', 'kiwi', 'mango']
+
+# %% Example
+# With no if statement:
+newlist = [x for x in fruits]
+print(newlist)
+# Out: ['apple', 'banana', 'cherry', 'kiwi', 'mango']
+
+
+# Iterable
+
+# %% Example
+# You can use the range() function to create an iterable:
+newlist = [x for x in range(10)]
+print(newlist)
+# Out: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# %% Example
+# Accept only numbers lower than 5:
+newlist = [x for x in range(10) if x < 5]
+print(newlist)
+# Out: [0, 1, 2, 3, 4]
+
+
+# Expression
+
+# %% Example
+# Set the values in the new list to upper case:
+newlist = [x.upper() for x in fruits]
+print(newlist)
+# Out: ['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO']
+
+# %% Example
+# Set all values in the new list to 'hello':
+newlist = ['hello' for x in fruits]
+print(newlist)
+# Out: ['hello', 'hello', 'hello', 'hello', 'hello']
+
+# %% Example
+# Return "orange" instead of "banana":
+newlist = [x if x != "banana" else "orange" for x in fruits]
+print(newlist)
+# Out: ['apple', 'orange', 'cherry', 'kiwi', 'mango']
+
+# endregion
