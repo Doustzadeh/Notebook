@@ -1,5 +1,6 @@
 # region Lists
 
+# ---------------------------------------------------------
 # List
 # Lists are used to store multiple items in a single variable.
 
@@ -10,6 +11,7 @@ print(thislist)
 # Out: ['apple', 'banana', 'cherry']
 
 
+# ---------------------------------------------------------
 # Allow Duplicates
 # Since lists are indexed, lists can have items with the same value:
 
@@ -20,6 +22,7 @@ print(thislist)
 # Out: ['apple', 'banana', 'cherry', 'apple', 'cherry']
 
 
+# ---------------------------------------------------------
 # List Length
 # To determine how many items a list has, use the len() function:
 
@@ -30,6 +33,7 @@ print(len(thislist))
 # Out: 3
 
 
+# ---------------------------------------------------------
 # List Items - Data Types
 
 # %% Example
@@ -50,6 +54,7 @@ print(type(mylist))
 # Out: <class 'list'>
 
 
+# ---------------------------------------------------------
 # The list() Constructor
 
 # %% Example
@@ -63,6 +68,7 @@ print(thislist)
 
 # region Access List Items
 
+# ---------------------------------------------------------
 # Access Items
 # Note: The first item has index 0.
 
@@ -73,6 +79,7 @@ print(thislist[1])
 # Out: banana
 
 
+# ---------------------------------------------------------
 # Negative Indexing
 # Negative indexing means start from the end
 # -1 refers to the last item, -2 refers to the second last item etc.
@@ -84,6 +91,7 @@ print(thislist[-1])
 # Out: cherry
 
 
+# ---------------------------------------------------------
 # Range of Indexes
 
 # %% Example
@@ -106,6 +114,7 @@ print(thislist[2:])
 # Out: ['cherry', 'orange', 'kiwi', 'melon', 'mango']
 
 
+# ---------------------------------------------------------
 # Range of Negative Indexes
 
 # %% Example
@@ -115,6 +124,7 @@ print(thislist[-4:-1])
 # Out: ['orange', 'kiwi', 'melon']
 
 
+# ---------------------------------------------------------
 # Check if Item Exists
 
 # %% Example
@@ -129,6 +139,7 @@ if "apple" in thislist:
 
 # region Change List Items
 
+# ---------------------------------------------------------
 # Change Item Value
 
 # %% Example
@@ -139,6 +150,7 @@ print(thislist)
 # Out: ['apple', 'blackcurrant', 'cherry']
 
 
+# ---------------------------------------------------------
 # Change a Range of Item Values
 
 # %% Example
@@ -163,6 +175,7 @@ print(thislist)
 # Out: ['apple', 'watermelon']
 
 
+# ---------------------------------------------------------
 # Insert Items
 
 # %% Example
@@ -177,6 +190,7 @@ print(thislist)
 
 # region Add List Items
 
+# ---------------------------------------------------------
 # Append Items
 
 # %% Example
@@ -187,6 +201,7 @@ print(thislist)
 # Out: ['apple', 'banana', 'cherry', 'orange']
 
 
+# ---------------------------------------------------------
 # Insert Items
 
 # %% Example
@@ -197,6 +212,7 @@ print(thislist)
 # Out: ['apple', 'orange', 'banana', 'cherry']
 
 
+# ---------------------------------------------------------
 # Extend List
 
 # %% Example
@@ -208,6 +224,7 @@ print(thislist)
 # Out: ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
 
 
+# ---------------------------------------------------------
 # Add Any Iterable
 
 # %% Example
@@ -223,6 +240,7 @@ print(thislist)
 
 # region Remove List Items
 
+# ---------------------------------------------------------
 # Remove Specified Item
 
 # %% Example
@@ -233,6 +251,7 @@ print(thislist)
 # Out: ['apple', 'cherry']
 
 
+# ---------------------------------------------------------
 # Remove Specified Index
 
 # %% Example
@@ -264,6 +283,7 @@ thislist = ["apple", "banana", "cherry"]
 del thislist
 
 
+# ---------------------------------------------------------
 # Clear the List
 
 # %% Example
@@ -278,6 +298,7 @@ print(thislist)
 
 # region Loop Lists
 
+# ---------------------------------------------------------
 # Loop Through a List
 
 # %% Example
@@ -290,6 +311,7 @@ for x in thislist:
 #      cherry
 
 
+# ---------------------------------------------------------
 # Loop Through the Index Numbers
 
 # %% Example
@@ -302,6 +324,7 @@ for i in range(len(thislist)):
 #      cherry
 
 
+# ---------------------------------------------------------
 # Using a While Loop
 
 # %% Example
@@ -316,6 +339,7 @@ while i < len(thislist):
 #      cherry
 
 
+# ---------------------------------------------------------
 # Looping Using List Comprehension
 
 # %% Example
@@ -331,6 +355,7 @@ thislist = ["apple", "banana", "cherry"]
 
 # region List Comprehension
 
+# ---------------------------------------------------------
 # List Comprehension
 
 # %% Example
@@ -351,6 +376,7 @@ print(newlist)
 # Out: ['apple', 'banana', 'mango']
 
 
+# ---------------------------------------------------------
 # Condition
 
 # %% Example
@@ -366,6 +392,7 @@ print(newlist)
 # Out: ['apple', 'banana', 'cherry', 'kiwi', 'mango']
 
 
+# ---------------------------------------------------------
 # Iterable
 
 # %% Example
@@ -381,6 +408,7 @@ print(newlist)
 # Out: [0, 1, 2, 3, 4]
 
 
+# ---------------------------------------------------------
 # Expression
 
 # %% Example
@@ -400,5 +428,114 @@ print(newlist)
 newlist = [x if x != "banana" else "orange" for x in fruits]
 print(newlist)
 # Out: ['apple', 'orange', 'cherry', 'kiwi', 'mango']
+
+# endregion
+
+
+# region Sort Lists
+
+# ---------------------------------------------------------
+# Sort List Alphanumerically
+# List objects have a sort() method that will sort the list alphanumerically, ascending, by default:
+
+# %% Example
+# Sort the list alphabetically:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+# Out: ['banana', 'kiwi', 'mango', 'orange', 'pineapple']
+
+# %% Example
+# Sort the list numerically:
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+# Out: [23, 50, 65, 82, 100]
+
+
+# ---------------------------------------------------------
+# Sort Descending
+# To sort descending, use the keyword argument reverse = True:
+
+# %% Example
+# Sort the list descending:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+# Out: ['pineapple', 'orange', 'mango', 'kiwi', 'banana']
+
+# %% Example
+# Sort the list descending:
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(reverse = True)
+print(thislist)
+# Out: [100, 82, 65, 50, 23]
+
+
+# ---------------------------------------------------------
+# Customize Sort Function
+# You can also customize your own function by using the keyword argument key = function.
+
+# %% Example
+# Sort the list based on how close the number is to 50:
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+# Out: [50, 65, 23, 82, 100]
+
+
+# ---------------------------------------------------------
+# Case Insensitive Sort
+# By default the sort() method is case sensitive, resulting in all capital letters being sorted before lower case letters:
+
+# %% Example
+# Case sensitive sorting can give an unexpected result:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort()
+print(thislist)
+# Out: ['Kiwi', 'Orange', 'banana', 'cherry']
+
+# %% Example
+# Perform a case-insensitive sort of the list:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+# Out: ['banana', 'cherry', 'Kiwi', 'Orange']
+
+
+# ---------------------------------------------------------
+# Reverse Order
+
+# %% Example
+# Reverse the order of the list items:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+# Out: ['cherry', 'Kiwi', 'Orange', 'banana']
+
+# endregion
+
+
+# region Copy Lists
+
+# ---------------------------------------------------------
+# Copy a List
+
+# %% Example
+# Make a copy of a list with the copy() method:
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+# Out: ['apple', 'banana', 'cherry']
+
+# %% Example
+# Make a copy of a list with the list() method:
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+# Out: ['apple', 'banana', 'cherry']
 
 # endregion
