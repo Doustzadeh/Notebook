@@ -1,5 +1,6 @@
 # region Variables
 
+# ---------------------------------------------------------
 # Creating Variables
 
 # %% Example
@@ -14,6 +15,7 @@ x = "Sally"  # x is now of type str
 print(x)
 
 
+# ---------------------------------------------------------
 # Casting
 
 # %% Example
@@ -22,6 +24,7 @@ y = int(3)    # y will be 3
 z = float(3)  # z will be 3.0
 
 
+# ---------------------------------------------------------
 # Get the Type
 
 # %% Example
@@ -31,6 +34,7 @@ print(type(x))
 print(type(y))
 
 
+# ---------------------------------------------------------
 # Single or Double Quotes
 
 # %% Example
@@ -39,6 +43,7 @@ x = "John"
 x = 'John'
 
 
+# ---------------------------------------------------------
 # Case-Sensitive
 # Variable names are case-sensitive.
 
@@ -52,6 +57,7 @@ A = "Sally"
 
 # region Variable Names
 
+# ---------------------------------------------------------
 #  Variable Names
 
 # %% Example
@@ -64,6 +70,7 @@ MYVAR = "John"
 myvar2 = "John"
 
 
+# ---------------------------------------------------------
 # Multi Words Variable Names
 
 # Camel Case
@@ -83,6 +90,7 @@ my_variable_name = "John"
 
 # region Variables - Assign Multiple Values
 
+# ---------------------------------------------------------
 # Many Values to Multiple Variables
 
 # %% Example
@@ -92,6 +100,7 @@ print(y)
 print(z)
 
 
+# ---------------------------------------------------------
 # One Value to Multiple Variables
 
 # %% Example
@@ -101,6 +110,7 @@ print(y)
 print(z)
 
 
+# ---------------------------------------------------------
 # Unpack a Collection
 
 # %% Example
@@ -116,6 +126,7 @@ print(z)
 
 # region Output Variables
 
+# ---------------------------------------------------------
 # Output Variables
 
 # %% Example
@@ -138,6 +149,7 @@ print(x + y)
 
 # region Global Variables
 
+# ---------------------------------------------------------
 # Global Variables
 
 # %% Example
@@ -160,6 +172,7 @@ myfunc()
 print("Python is " + x)
 
 
+# ---------------------------------------------------------
 # The global Keyword
 
 # %% Example
