@@ -219,3 +219,111 @@ print(thislist)
 # Out: ['apple', 'banana', 'cherry', 'kiwi', 'orange']
 
 # endregion
+
+
+# region Remove List Items
+
+# Remove Specified Item
+
+# %% Example
+# Remove "banana":
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+# Out: ['apple', 'cherry']
+
+
+# Remove Specified Index
+
+# %% Example
+# Remove the second item:
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+# Out: ['apple', 'cherry']
+
+# If you do not specify the index, the pop() method removes the last item.
+
+# %% Example
+# Remove the last item:
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+# Out: ['apple', 'banana']
+
+# %% Example
+# Remove the first item:
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+# Out: ['banana', 'cherry']
+
+# %% Example
+# Delete the entire list:
+thislist = ["apple", "banana", "cherry"]
+del thislist
+
+
+# Clear the List
+
+# %% Example
+# Clear the list content:
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+# Out: []
+
+# endregion
+
+
+# region Loop Lists
+
+# Loop Through a List
+
+# %% Example
+# Print all items in the list, one by one:
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+    print(x)
+# Out: apple
+#      banana
+#      cherry
+
+
+# Loop Through the Index Numbers
+
+# %% Example
+# Print all items by referring to their index number:
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+    print(thislist[i])
+# Out: apple
+#      banana
+#      cherry
+
+
+# Using a While Loop
+
+# %% Example
+# Print all items, using a while loop to go through all the index numbers
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+    print(thislist[i])
+    i = i + 1
+# Out: apple
+#      banana
+#      cherry
+
+
+# Looping Using List Comprehension
+
+# %% Example
+# A short hand for loop that will print all items in a list:
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+# Out: apple
+#      banana
+#      cherry
+
+# endregion
