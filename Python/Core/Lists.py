@@ -574,3 +574,70 @@ print(list1)
 # Out: ['a', 'b', 'c', 1, 2, 3]
 
 # endregion
+
+
+# region List Methods
+
+# ---------------------------------------------------------
+# List append() Method
+# The append() method appends an element to the end of the list.
+
+# %% Example
+# Add an element to the fruits list:
+fruits = ['apple', 'banana', 'cherry']
+fruits.append("orange")
+print(fruits)
+# Out: ['apple', 'banana', 'cherry', 'orange']
+
+# %% Example
+# Add a list to a list:
+a = ["apple", "banana", "cherry"]
+b = ["Ford", "BMW", "Volvo"]
+a.append(b)
+print(a)
+# Out: ['apple', 'banana', 'cherry', ['Ford', 'BMW', 'Volvo']]
+
+
+# ---------------------------------------------------------
+# List clear() Method
+# The clear() method removes all the elements from a list.
+
+# %% Example
+# Remove all elements from the fruits list:
+fruits = ['apple', 'banana', 'cherry', 'orange']
+fruits.clear()
+print(fruits)
+# Out: []
+
+
+# ---------------------------------------------------------
+# List copy() Method
+# The copy() method returns a copy of the specified list.
+
+# %% Example
+# Copy the fruits list:
+fruits = ['apple', 'banana', 'cherry', 'orange']
+x = fruits.copy()
+print(x)
+# Out: ['apple', 'banana', 'cherry', 'orange']
+
+
+# ---------------------------------------------------------
+# List count() Method
+# The count() method returns the number of elements with the specified value.
+
+# %% Example
+# Return the number of times the value "cherry" appears in the fruits list:
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.count("cherry")
+print(x)
+# Out: 1
+
+# %% Example
+# Return the number of times the value 9 appears int the list:
+points = [1, 4, 2, 9, 7, 8, 9, 3, 1]
+x = points.count(9)
+print(x)
+# Out: 2
+
+# endregion
