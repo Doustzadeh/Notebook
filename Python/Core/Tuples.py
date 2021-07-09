@@ -196,3 +196,54 @@ print(thistuple) #this will raise an error because the tuple no longer exists
 # Out: NameError: name 'thistuple' is not defined
 
 # endregion
+
+
+# region Unpack Tuples
+
+# ---------------------------------------------------------
+# Unpacking a Tuple
+
+# %% Example
+# Packing a tuple:
+fruits = ("apple", "banana", "cherry")
+print(fruits)
+# Out: ('apple', 'banana', 'cherry')
+
+# %% Example
+# Unpacking a tuple:
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green)
+# Out: apple
+print(yellow)
+# Out: banana
+print(red)
+# Out: cherry
+
+
+# ---------------------------------------------------------
+# Using Asterisk*
+
+# %% Example
+# Assign the rest of the values as a list called "red":
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+print(green)
+# Out: apple
+print(yellow)
+# Out: banana
+print(red)
+# Out: ['cherry', 'strawberry', 'raspberry']
+
+# %% Example
+# Add a list of values the "tropic" variable:
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+print(green)
+# Out: apple
+print(tropic)
+# Out: ['mango', 'papaya', 'pineapple']
+print(red)
+# Out: cherry
+
+# endregion
