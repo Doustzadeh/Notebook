@@ -319,3 +319,32 @@ print(mytuple)
 # Out: ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
 
 # endregion
+
+
+# region Tuple Methods
+
+# ---------------------------------------------------------
+# Tuple count() Method
+# The count() method returns the number of times a specified value appears in the tuple.
+
+# %% Example
+# Return the number of times the value 5 appears in the tuple:
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.count(5)
+print(x)
+# Out: 2
+
+
+# ---------------------------------------------------------
+# Tuple index() Method
+# The index() method finds the first occurrence of the specified value.
+# The index() method raises an exception if the value is not found.
+
+# %% Example
+# Search for the first occurrence of the value 8, and return its position:
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.index(8)
+print(x)
+# Out: 3
+
+# endregion
