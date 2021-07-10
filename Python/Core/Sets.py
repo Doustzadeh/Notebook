@@ -178,3 +178,92 @@ print(thisset)
 # Out: NameError: name 'thisset' is not defined
 
 # endregion
+
+
+# region Loop Sets
+
+# ---------------------------------------------------------
+# Loop Items
+
+# %% Example
+# Loop through the set, and print the values:
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+    print(x)
+# Out: apple
+#      banana
+#      cherry
+
+# endregion
+
+
+# region Join Sets
+
+# ---------------------------------------------------------
+# Join Two Sets
+
+# %% Example
+# The union() method returns a new set with all items from both sets:
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+set3 = set1.union(set2)
+print(set3)
+# Out: {1, 2, 3, 'c', 'b', 'a'}
+
+# %% Example
+# The update() method inserts the items in set2 into set1:
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+set1.update(set2)
+print(set1)
+# Out: {1, 2, 3, 'c', 'b', 'a'}
+
+# Note: Both union() and update() will exclude any duplicate items.
+
+
+# ---------------------------------------------------------
+# Keep ONLY the Duplicates
+
+# %% Example
+# Keep the items that exist in both set x, and set y:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y)
+print(x)
+# Out: {'apple'}
+
+# The intersection() method will return a new set, that only contains the items that are present in both sets.
+
+# %% Example
+# Return a set that contains the items that exist in both set x, and set y:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+# Out: {'apple'}
+
+
+# ---------------------------------------------------------
+# Keep All, But NOT the Duplicates
+
+# The symmetric_difference_update() method will keep only the elements that are NOT present in both sets.
+
+# %% Example
+# Keep the items that are not present in both sets:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.symmetric_difference_update(y)
+print(x)
+# Out: {'microsoft', 'google', 'cherry', 'banana'}
+
+# The symmetric_difference() method will return a new set, that contains only the elements that are NOT present in both sets.
+
+# %% Example
+# Return a set that contains all items from both sets, except items that are present in both:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.symmetric_difference(y)
+print(z)
+# Out: {'microsoft', 'google', 'cherry', 'banana'}
+
+# endregion
