@@ -515,4 +515,72 @@ fruits.remove("banana")
 print(fruits)
 # Out: {'cherry', 'apple'}
 
+
+# ---------------------------------------------------------
+# Set symmetric_difference() Method
+# The symmetric_difference() method returns a set that contains all items from both set, 
+# but not the items that are present in both sets.
+# Meaning: The returned set contains a mix of items that are not present in both sets.
+
+# %% Example
+# Return a set that contains all items from both sets, except items that are present in both sets:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.symmetric_difference(y)
+print(z)
+# Out: {'banana', 'microsoft', 'cherry', 'google'}
+
+
+# ---------------------------------------------------------
+# Set symmetric_difference_update() Method
+# The symmetric_difference_update() method updates the original set by removing items that are present in both sets, 
+# and inserting the other items.
+
+# %% Example
+# Remove the items that are present in both sets, AND insert the items that is not present in both sets:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.symmetric_difference_update(y)
+print(x)
+# Out: {'banana', 'microsoft', 'cherry', 'google'}
+
+
+# ---------------------------------------------------------
+# Set union() Method
+# The union() method returns a set that contains all items from the original set, and all items from the specified set(s).
+# You can specify as many sets you want, separated by commas.
+# It does not have to be a set, it can be any iterable object.
+# If an item is present in more than one set, the result will contain only one appearance of this item.
+
+# %% Example
+# Return a set that contains all items from both sets, duplicates are excluded:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.union(y)
+print(z)
+# Out: {'cherry', 'google', 'banana', 'apple', 'microsoft'}
+
+# %% Example
+# Unify more than 2 sets:
+x = {"a", "b", "c"}
+y = {"f", "d", "a"}
+z = {"c", "d", "e"}
+result = x.union(y, z)
+print(result)
+# Out: {'b', 'd', 'a', 'f', 'e', 'c'}
+
+
+# ---------------------------------------------------------
+# Set update() Method
+# The update() method updates the current set, by adding items from another set (or any other iterable).
+# If an item is present in both sets, only one appearance of this item will be present in the updated set.
+
+# %% Example
+# Insert the items from set y into set x:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.update(y)
+print(x)
+# Out: {'cherry', 'google', 'banana', 'apple', 'microsoft'}
+
 # endregion
