@@ -438,4 +438,81 @@ z = x.isdisjoint(y)
 print(z)
 # Out: False
 
+
+# ---------------------------------------------------------
+# Set issubset() Method
+# The issubset() method returns True if all items in the set exists in the specified set, otherwise it retuns False.
+
+# %% Example
+# Return True if all items in set x are present in set y:
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
+z = x.issubset(y)
+print(z)
+# Out: True
+
+# %% Example
+# Return False if not all items in set x are present in set y:
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b"}
+z = x.issubset(y)
+print(z)
+# Out: False
+
+
+# ---------------------------------------------------------
+# Set issuperset() Method
+# The issuperset() method returns True if all items in the specified set exists in the original set, otherwise it retuns False.
+
+# %% Example
+# Return True if all items set y are present in set x:
+x = {"f", "e", "d", "c", "b", "a"}
+y = {"a", "b", "c"}
+z = x.issuperset(y)
+print(z)
+# Out: True
+
+# %% Example
+# Return False if not all items in set y are present in set x:
+x = {"f", "e", "d", "c", "b"}
+y = {"a", "b", "c"}
+z = x.issuperset(y)
+print(z)
+# Out: False
+
+
+# ---------------------------------------------------------
+# Set pop() Method
+# The pop() method removes a random item from the set.
+# This method returns the removed item.
+
+# %% Example
+# Remove a random item from the set:
+fruits = {"apple", "banana", "cherry"}
+fruits.pop()
+print(fruits)
+# Out: {'cherry', 'apple'}
+
+# %% Example
+# Return the removed element:
+fruits = {"apple", "banana", "cherry"}
+x = fruits.pop()
+print(x)
+# Out: banana
+
+
+# ---------------------------------------------------------
+# Set remove() Method
+# The remove() method removes the specified element from the set.
+# This method is different from the discard() method, 
+# because the remove() method will raise an error if the specified item does not exist, 
+# and the discard() method will not.
+
+# %% Example
+# Remove "banana" from the set:
+fruits = {"apple", "banana", "cherry"}
+fruits.remove("banana")
+print(fruits)
+# Out: {'cherry', 'apple'}
+
 # endregion
