@@ -352,4 +352,90 @@ x.difference_update(y)
 print(x)
 # Out: {'banana', 'cherry'}
 
+
+# ---------------------------------------------------------
+# Set discard() Method
+# The discard() method removes the specified item from the set.
+# This method is different from the remove() method, 
+# because the remove() method will raise an error if the specified item does not exist, 
+# and the discard() method will not.
+
+# %% Example
+# Remove "banana" from the set:
+fruits = {"apple", "banana", "cherry"}
+fruits.discard("banana")
+print(fruits)
+# Out: {'cherry', 'apple'}
+
+
+# ---------------------------------------------------------
+# Set intersection() Method
+# The intersection() method returns a set that contains the similarity between two or more sets.
+# Meaning: The returned set contains only items that exist in both sets, 
+# or in all sets if the comparison is done with more than two sets.
+
+# %% Example
+# Return a set that contains the items that exist in both set x, and set y:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+# Out: {'apple'}
+
+# %% Example
+# Compare 3 sets, and return a set with items that is present in all 3 sets:
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
+result = x.intersection(y, z)
+print(result)
+# Out: {'c'}
+
+
+# ---------------------------------------------------------
+# Set intersection_update() Method
+# The intersection_update() method removes the items that is not present in both sets 
+# (or in all sets if the comparison is done between more than two sets).
+# The intersection_update() method is different from the intersection() method, 
+# because the intersection() method returns a new set, without the unwanted items, 
+# and the intersection_update() method removes the unwanted items from the original set.
+
+# %% Example
+# Remove the items that is not present in both x and y:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y)
+print(x)
+# Out: {'apple'}
+
+# %% Example
+# Compare 3 sets, and return a set with items that is present in all 3 sets:
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
+x.intersection_update(y, z)
+print(x)
+# Out: {'c'}
+
+
+# ---------------------------------------------------------
+# Set isdisjoint() Method
+# The isdisjoint() method returns True if none of the items are present in both sets, otherwise it returns False.
+
+# %% Example
+# Return True if no items in set x is present in set y:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "facebook"}
+z = x.isdisjoint(y)
+print(z)
+# Out: True
+
+# %% Example
+# Return False if one ore more items are present in both sets:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.isdisjoint(y)
+print(z)
+# Out: False
+
 # endregion
