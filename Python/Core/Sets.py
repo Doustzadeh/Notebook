@@ -267,3 +267,89 @@ print(z)
 # Out: {'microsoft', 'google', 'cherry', 'banana'}
 
 # endregion
+
+
+# region Set Methods
+
+# ---------------------------------------------------------
+# Set add() Method
+# The add() method adds an element to the set.
+# If the element already exists, the add() method does not add the element.
+
+# %% Example
+# Add an element to the fruits set:
+fruits = {"apple", "banana", "cherry"}
+fruits.add("orange")
+print(fruits)
+# Out: {'banana', 'cherry', 'orange', 'apple'}
+
+# %% Example
+# Try to add an element that already exists:
+fruits = {"apple", "banana", "cherry"}
+fruits.add("apple")
+print(fruits)
+# Out: {'banana', 'cherry', 'apple'}
+
+
+# ---------------------------------------------------------
+# Set clear() Method
+# The clear() method removes all elements in a set.
+
+# %% Example
+# Remove all elements from the fruits set:
+fruits = {"apple", "banana", "cherry"}
+fruits.clear()
+print(fruits)
+# Out: set()
+
+
+# ---------------------------------------------------------
+# Set copy() Method
+# The copy() method copies the set.
+
+# %% Example
+# Copy the fruits set:
+fruits = {"apple", "banana", "cherry"}
+x = fruits.copy()
+print(x)
+# Out: {'banana', 'cherry', 'apple'}
+
+
+# ---------------------------------------------------------
+# Set difference() Method
+# The difference() method returns a set that contains the difference between two sets.
+# Meaning: The returned set contains items that exist only in the first set, and not in both sets.
+
+# %% Example
+# Return a set that contains the items that only exist in set x, and not in set y:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.difference(y)
+print(z)
+# Out: {'banana', 'cherry'}
+
+# %% Example
+# Return a set that contains the items that only exist in set y, and not in set x:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = y.difference(x)
+print(z)
+# Out: {'google', 'microsoft'}
+
+
+# ---------------------------------------------------------
+# Set difference_update() Method
+# The difference_update() method removes the items that exist in both sets.
+# The difference_update() method is different from the difference() method, 
+# because the difference() method returns a new set, without the unwanted items, 
+# and the difference_update() method removes the unwanted items from the original set.
+
+# %% Example
+# Remove the items that exist in both sets:
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.difference_update(y)
+print(x)
+# Out: {'banana', 'cherry'}
+
+# endregion
