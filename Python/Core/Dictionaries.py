@@ -518,3 +518,114 @@ print(myfamily)
 # Out: {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
 
 # endregion
+
+
+# region Dictionary Methods
+
+# ---------------------------------------------------------
+# Dictionary clear() Method
+# The clear() method removes all the elements from a dictionary.
+
+# %% Example
+# Remove all elements from the car list:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.clear()
+print(car)
+# Out: {}
+
+
+# ---------------------------------------------------------
+# Dictionary copy() Method
+# The copy() method returns a copy of the specified dictionary.
+
+# %% Example
+# Copy the car dictionary:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.copy()
+print(x)
+# Out: {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+
+# ---------------------------------------------------------
+# Dictionary fromkeys() Method
+# The fromkeys() method returns a dictionary with the specified keys and the specified value.
+
+# %% Example
+# Create a dictionary with 3 keys, all with the value 0:
+x = ('key1', 'key2', 'key3')
+y = 0
+thisdict = dict.fromkeys(x, y)
+print(thisdict)
+# Out: {'key1': 0, 'key2': 0, 'key3': 0}
+
+# %% Example
+# Same example as above, but without specifying the value:
+x = ('key1', 'key2', 'key3')
+thisdict = dict.fromkeys(x)
+print(thisdict)
+# Out: {'key1': None, 'key2': None, 'key3': None}
+
+
+# ---------------------------------------------------------
+# Dictionary get() Method
+# The get() method returns the value of the item with the specified key.
+
+# %% Example
+# Get the value of the "model" item:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.get("model")
+print(x)
+# Out: Mustang
+
+# %% Example
+# Try to return the value of an item that do not exist:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.get("price", 15000)
+print(x)
+# Out: 15000
+
+# ---------------------------------------------------------
+# Dictionary items() Method
+# The items() method returns a view object. 
+# The view object contains the key-value pairs of the dictionary, as tuples in a list.
+
+# %% Example
+# Return the dictionary's key-value pairs:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.items()
+print(x)
+# Out: dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+
+# %% Example
+# When an item in the dictionary changes value, the view object also gets updated:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.items()
+car["year"] = 2018
+print(x)
+# Out: dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 2018)])
+
+# endregion
