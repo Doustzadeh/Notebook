@@ -366,3 +366,76 @@ print(thisdict)
 # Out: {}
 
 # endregion
+
+
+# region Loop Dictionaries
+
+# ---------------------------------------------------------
+# Loop Through a Dictionary
+
+# %% Example
+# Print all key names in the dictionary, one by one:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+    print(x)
+# Out: brand
+#      model
+#      year
+
+# %% Example
+# Print all values in the dictionary, one by one:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+    print(thisdict[x])
+# Out: Ford
+#      Mustang
+#      1964
+
+# %% Example
+# You can also use the values() method to return values of a dictionary:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+   print(x)
+# Out: Ford
+#      Mustang
+#      1964
+
+# %% Example
+# You can use the keys() method to return the keys of a dictionary:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.keys():
+    print(x)
+# Out: brand
+#      model
+#      year
+
+# %% Example
+# Loop through both keys and values, by using the items() method:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x, y in thisdict.items():
+    print(x, y)
+# Out: brand Ford
+#      model Mustang
+#      year 1964
+
+# endregion
