@@ -628,4 +628,161 @@ car["year"] = 2018
 print(x)
 # Out: dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 2018)])
 
+
+# ---------------------------------------------------------
+# Dictionary keys() Method
+# The keys() method returns a view object. The view object contains the keys of the dictionary, as a list.
+
+# %% Example
+# Return the keys:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.keys()
+print(x)
+# Out: dict_keys(['brand', 'model', 'year'])
+
+# %% Example
+# When an item is added in the dictionary, the view object also gets updated:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.keys()
+car["color"] = "white"
+print(x)
+# Out: dict_keys(['brand', 'model', 'year', 'color'])
+
+
+# ---------------------------------------------------------
+# Dictionary pop() Method
+# The pop() method removes the specified item from the dictionary.
+# The value of the removed item is the return value of the pop() method.
+
+# %% Example
+# Remove "model" from the dictionary:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.pop("model")
+print(car)
+# Out: {'brand': 'Ford', 'year': 1964}
+
+# %% Example
+# The value of the removed item is the return value of the pop() method:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.pop("model")
+print(x)
+# Out: Mustang
+
+
+# ---------------------------------------------------------
+# Dictionary popitem() Method
+# The popitem() method removes the item that was last inserted into the dictionary. 
+# In versions before 3.7, the popitem() method removes a random item.
+# The removed item is the return value of the popitem() method, as a tuple.
+
+# %% Example
+# Remove the last item from the dictionary:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.popitem()
+print(car)
+# Out: {'brand': 'Ford', 'model': 'Mustang'}
+
+# %% Example
+# The removed item is the return value of the pop() method:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.popitem()
+print(x)
+# Out: ('year', 1964)
+
+
+# ---------------------------------------------------------
+# Dictionary setdefault() Method
+# The setdefault() method returns the value of the item with the specified key.
+
+# %% Example
+# Get the value of the "model" item:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.setdefault("model", "Bronco")
+print(x)
+# Out: Mustang
+
+# %% Example
+# Get the value of the "color" item, if the "color" item does not exist, insert "color" with the value "white":
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.setdefault("color", "white")
+print(x)
+# Out: white
+
+# ---------------------------------------------------------
+# Dictionary update() Method
+# The update() method inserts the specified items to the dictionary.
+# The specified items can be a dictionary, or an iterable object with key value pairs.
+
+# %% Example
+# Insert an item to the dictionary:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.update({"color": "White"})
+print(car)
+# Out: {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+
+
+# ---------------------------------------------------------
+# Dictionary values() Method
+# The values() method returns a view object. The view object contains the values of the dictionary, as a list.
+# The view object will reflect any changes done to the dictionary, see example below.
+
+# %% Example
+# Return the values:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.values()
+print(x)
+# Out: dict_values(['Ford', 'Mustang', 1964])
+
+# %% Example
+# When a values is changed in the dictionary, the view object also gets updated:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.values()
+car["year"] = 2018
+print(x)
+# Out: dict_values(['Ford', 'Mustang', 2018])
+
 # endregion
