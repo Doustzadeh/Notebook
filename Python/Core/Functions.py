@@ -111,4 +111,54 @@ my_function(fruits)
 #      banana
 #      cherry
 
+
+# ---------------------------------------------------------
+# Return Values
+
+# %% Example
+def my_function(x):
+    return 5 * x
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+# Out: 15
+#      25
+#      45
+
+
+# ---------------------------------------------------------
+# The pass Statement
+
+# %% Example
+def myfunction():
+    pass
+
+
+# ---------------------------------------------------------
+# Recursion
+
+# %% Example
+# Recursion Example
+def tri_recursion(k):
+    if(k > 0):
+        result = k + tri_recursion(k - 1)
+        print(result)
+    else:
+        result = 0
+    return result
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+# Out: 
+# 
+# 
+#      Recursion Example Results
+#      1
+#      3
+#      6
+#      10
+#      15
+#      21
+# 
+#      21
+
 # endregion
