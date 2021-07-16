@@ -170,4 +170,135 @@ fruits.extend(points)
 print(fruits)
 # Out: ['apple', 'banana', 'cherry', 1, 4, 5, 9]
 
+
+# ---------------------------------------------------------
+# List index() Method
+# The index() method returns the position at the first occurrence of the specified value.
+
+# %% Example
+# What is the position of the value "cherry":
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.index("cherry")
+print(x)
+# Out: 2
+
+# %% Example
+# What is the position of the value 32:
+fruits = [4, 55, 64, 32, 16, 32]
+x = fruits.index(32)
+print(x)
+# Out: 3
+
+
+# ---------------------------------------------------------
+# List insert() Method
+# The insert() method inserts the specified value at the specified position.
+
+# %% Example
+# Insert the value "orange" as the second element of the fruit list:
+fruits = ['apple', 'banana', 'cherry']
+fruits.insert(1, "orange")
+print(fruits)
+# Out: ['apple', 'orange', 'banana', 'cherry']
+
+
+# ---------------------------------------------------------
+# List pop() Method
+# The pop() method removes the element at the specified position.
+
+# %% Example
+# Remove the second element of the fruit list:
+fruits = ['apple', 'banana', 'cherry']
+fruits.pop(1)
+print(fruits)
+# Out: ['apple', 'cherry']
+
+# %% Example
+# Return the removed element:
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.pop(1)
+print(x)
+# Out: banana
+
+
+# ---------------------------------------------------------
+# List remove() Method
+# The remove() method removes the first occurrence of the element with the specified value.
+
+# %% Example
+# Remove the "banana" element of the fruit list:
+fruits = ['apple', 'banana', 'cherry']
+fruits.remove("banana")
+print(fruits)
+# Out: ['apple', 'cherry']
+
+
+# ---------------------------------------------------------
+# List reverse() Method
+# The reverse() method reverses the sorting order of the elements.
+
+# %% Example
+# Reverse the order of the fruit list:
+fruits = ['apple', 'banana', 'cherry']
+fruits.reverse()
+print(fruits)
+# Out: ['cherry', 'banana', 'apple']
+
+
+# ---------------------------------------------------------
+# List sort() Method
+# The sort() method sorts the list ascending by default.
+
+# %% Example
+# Sort the list alphabetically:
+cars = ['Ford', 'BMW', 'Volvo']
+cars.sort()
+print(cars)
+# Out: ['BMW', 'Ford', 'Volvo']
+
+# %% Example
+# Sort the list descending:
+cars = ['Ford', 'BMW', 'Volvo']
+cars.sort(reverse=True)
+print(cars)
+# Out: ['Volvo', 'Ford', 'BMW']
+
+# %% Example
+# Sort the list by the length of the values:
+# A function that returns the length of the value:
+def myFunc(e):
+    return len(e)
+
+cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']
+cars.sort(key=myFunc)
+print(cars)
+# Out: ['VW', 'BMW', 'Ford', 'Mitsubishi']
+
+# %% Example
+# Sort a list of dictionaries based on the "year" value of the dictionaries:
+# A function that returns the 'year' value:
+def myFunc(e):
+    return e['year']
+
+cars = [
+  {'car': 'Ford', 'year': 2005},
+  {'car': 'Mitsubishi', 'year': 2000},
+  {'car': 'BMW', 'year': 2019},
+  {'car': 'VW', 'year': 2011}
+]
+cars.sort(key=myFunc)
+print(cars)
+# Out: [{'car': 'Mitsubishi', 'year': 2000}, {'car': 'Ford', 'year': 2005}, {'car': 'VW', 'year': 2011}, {'car': 'BMW', 'year': 2019}]
+
+# %% Example
+# Sort the list by the length of the values and reversed:
+# A function that returns the length of the value:
+def myFunc(e):
+    return len(e)
+
+cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']
+cars.sort(reverse=True, key=myFunc)
+print(cars)
+# Out: ['Mitsubishi', 'Ford', 'BMW', 'VW']
+
 # endregion
