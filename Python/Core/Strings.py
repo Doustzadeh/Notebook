@@ -1,5 +1,6 @@
 # region Strings
 
+# ---------------------------------------------------------
 # Strings
 
 # %% Example
@@ -7,6 +8,7 @@ print("Hello")
 print('Hello')
 
 
+# ---------------------------------------------------------
 # Assign String to a Variable
 
 # %% Example
@@ -14,6 +16,7 @@ a = "Hello"
 print(a)
 
 
+# ---------------------------------------------------------
 # Multiline Strings
 
 # %% Example
@@ -31,6 +34,7 @@ ut labore et dolore magna aliqua.'''
 print(a)
 
 
+# ---------------------------------------------------------
 # Strings are Arrays
 
 # %% Example
@@ -38,6 +42,7 @@ a = "Hello, World!"
 print(a[1])
 
 
+# ---------------------------------------------------------
 # Looping Through a String
 
 # %% Example
@@ -45,6 +50,7 @@ for x in "banana":
     print(x)
 
 
+# ---------------------------------------------------------
 # String Length
 
 # %% Example
@@ -52,6 +58,7 @@ a = "Hello, World!"
 print(len(a))
 
 
+# ---------------------------------------------------------
 # Check String
 
 # %% Example
@@ -64,6 +71,7 @@ if "free" in txt:
     print("Yes, 'free' is present.")
 
 
+# ---------------------------------------------------------
 # Check if NOT
 
 # %% Example
@@ -80,6 +88,7 @@ if "expensive" not in txt:
 
 # region Slicing Strings
 
+# ---------------------------------------------------------
 # Slicing
 
 # %% Example
@@ -87,6 +96,7 @@ b = "Hello, World!"
 print(b[2:5])
 
 
+# ---------------------------------------------------------
 # Slice From the Start
 
 # %% Example
@@ -94,6 +104,7 @@ b = "Hello, World!"
 print(b[:5])
 
 
+# ---------------------------------------------------------
 # Slice To the End
 
 # %% Example
@@ -101,6 +112,7 @@ b = "Hello, World!"
 print(b[2:])
 
 
+# ---------------------------------------------------------
 # Negative Indexing
 
 # %% Example
@@ -112,6 +124,7 @@ print(b[-5:-2])
 
 # region Modify Strings
 
+# ---------------------------------------------------------
 # Upper Case
 
 # %% Example
@@ -120,6 +133,7 @@ a = "Hello, World!"
 print(a.upper())
 
 
+# ---------------------------------------------------------
 # Lower Case
 
 # %% Example
@@ -128,6 +142,7 @@ a = "Hello, World!"
 print(a.lower())
 
 
+# ---------------------------------------------------------
 # Remove Whitespace
 
 # %% Example
@@ -136,6 +151,7 @@ a = " Hello, World! "
 print(a.strip())  # returns "Hello, World!"
 
 
+# ---------------------------------------------------------
 # Replace String
 
 # %% Example
@@ -144,6 +160,7 @@ a = "Hello, World!"
 print(a.replace("H", "J"))
 
 
+# ---------------------------------------------------------
 # Split String
 
 # %% Example
@@ -156,6 +173,7 @@ print(a.split(","))  # returns ['Hello', ' World!']
 
 # region String Concatenation
 
+# ---------------------------------------------------------
 # String Concatenation
 
 # %% Example
@@ -175,6 +193,7 @@ print(c)
 
 # region Format - Strings
 
+# ---------------------------------------------------------
 # String Format
 
 # %% Example
@@ -201,6 +220,7 @@ print(myorder.format(quantity, itemno, price))
 
 # region Escape Characters
 
+# ---------------------------------------------------------
 # Escape Characters
 
 # %% Example
@@ -261,6 +281,7 @@ print(txt)
 # Note: All string methods returns new values. They do not change the original string.
 
 
+# ---------------------------------------------------------
 # String capitalize() Method
 # The capitalize() method returns a string where the first character is upper case.
 
@@ -272,6 +293,7 @@ print (x)
 # Out: Hello, and welcome to my world.
 
 
+# ---------------------------------------------------------
 # String casefold() Method
 # The casefold() method returns a string where all the characters are lower case.
 
@@ -283,6 +305,7 @@ print(x)
 # Out: hello, and welcome to my world!
 
 
+# ---------------------------------------------------------
 # String center() Method
 # The center() method will center align the string, using a specified character (space is default) as the fill character.
 
@@ -300,6 +323,7 @@ print(x)
 # Out: OOOOOOObananaOOOOOOO
 
 
+# ---------------------------------------------------------
 # String count() Method
 # The count() method returns the number of times a specified value appears in the string.
 
@@ -318,6 +342,7 @@ print(x)
 # Out: 1
 
 
+# ---------------------------------------------------------
 # String encode() Method
 # The encode() method encodes the string, using the specified encoding. 
 # If no encoding is specified, UTF-8 will be used.
@@ -344,6 +369,7 @@ print(txt.encode(encoding="ascii",errors="xmlcharrefreplace"))
 # Out: b'My name is St&#229;le'
 
 
+# ---------------------------------------------------------
 # String endswith() Method
 # The endswith() method returns True if the string ends with the specified value, otherwise False.
 
@@ -369,6 +395,7 @@ print(x)
 # Out: False
 
 
+# ---------------------------------------------------------
 # String expandtabs() Method
 # The expandtabs() method sets the tab size to the specified number of whitespaces.
 
@@ -394,6 +421,7 @@ print(txt.expandtabs(10))
 # Out: H         e         l         l         o
 
 
+# ---------------------------------------------------------
 # String find() Method
 # The find() method finds the first occurrence of the specified value.
 # The find() method returns -1 if the value is not found.
@@ -430,6 +458,7 @@ print(txt.index("q"))
 # Out: ValueError: substring not found
 
 
+# ---------------------------------------------------------
 # String format() Method
 # The format() method formats the specified value(s) and insert them inside the string's placeholder.
 # The format() method returns the formatted string.
@@ -589,10 +618,12 @@ print(txt.format(0.25))
 # Out: You scored 25%
 
 
+# ---------------------------------------------------------
 # String format_map() Method
 # Formats specified values in a string
 
 
+# ---------------------------------------------------------
 # String index() Method
 # The index() method finds the first occurrence of the specified value.
 # The index() method raises an exception if the value is not found.
@@ -629,6 +660,7 @@ print(txt.index("q"))
 # Out: ValueError: substring not found
 
 
+# ---------------------------------------------------------
 # String isalnum() Method
 # The isalnum() method returns True if all the characters are alphanumeric, 
 # meaning alphabet letter (a-z) and numbers (0-9).
@@ -648,6 +680,7 @@ print(x)
 # Out: False
 
 
+# ---------------------------------------------------------
 # String isalpha() Method
 # The isalpha() method returns True if all the characters are alphabet letters (a-z).
 
@@ -666,6 +699,7 @@ print(x)
 # Out: False
 
 
+# ---------------------------------------------------------
 # String isdecimal() Method
 # The isdecimal() method returns True if all the characters are decimals (0-9).
 
@@ -687,6 +721,7 @@ print(b.isdecimal())
 # Out: False
 
 
+# ---------------------------------------------------------
 # String isdigit() Method
 # The isdigit() method returns True if all the characters are digits, otherwise False.
 
@@ -708,6 +743,7 @@ print(b.isdigit())
 # Out: True
 
 
+# ---------------------------------------------------------
 # String isidentifier() Method
 # The isidentifier() method returns True if the string is a valid identifier, otherwise False.
 # A string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_). 
@@ -737,6 +773,7 @@ print(d.isidentifier())
 # Out: False
 
 
+# ---------------------------------------------------------
 # String islower() Method
 # The islower() method returns True if all the characters are in lower case, otherwise False.
 # Numbers, symbols and spaces are not checked, only alphabet characters.
@@ -762,6 +799,7 @@ print(c.islower())
 # Out: False
 
 
+# ---------------------------------------------------------
 # String isnumeric() Method
 # The isnumeric() method returns True if all the characters are numeric (0-9), otherwise False.
 # Exponents, like ² and ¾ are also considered to be numeric values.
@@ -794,6 +832,7 @@ print(e.isnumeric())
 # Out: False
 
 
+# ---------------------------------------------------------
 # String isprintable() Method
 # The isprintable() method returns True if all the characters are printable, otherwise False.
 
@@ -812,6 +851,7 @@ print(x)
 # Out: False
 
 
+# ---------------------------------------------------------
 # String isspace() Method
 # The isspace() method returns True if all the characters in a string are whitespaces, otherwise False.
 
@@ -830,6 +870,7 @@ print(x)
 # Out: False
 
 
+# ---------------------------------------------------------
 # String istitle() Method
 # The istitle() method returns True if all words in a text start with a upper case letter, 
 # AND the rest of the word are lower case letters, otherwise False.
@@ -859,6 +900,7 @@ print(d.istitle())
 # Out: True
 
 
+# ---------------------------------------------------------
 # String isupper() Method
 # The isupper() method returns True if all the characters are in upper case, otherwise False.
 # Numbers, symbols and spaces are not checked, only alphabet characters.
@@ -884,6 +926,7 @@ print(c.isupper())
 # Out: True
 
 
+# ---------------------------------------------------------
 # String join() Method
 # The join() method takes all items in an iterable and joins them into one string.
 # A string must be specified as the separator.
@@ -903,6 +946,7 @@ print(x)
 # Out: NameError: name 'myDict' is not defined
 
 
+# ---------------------------------------------------------
 # String ljust() Method
 # The ljust() method will left align the string, using a specified character (space is default) as the fill character.
 
@@ -921,6 +965,7 @@ print(x)
 # Out: bananaOOOOOOOOOOOOOO
 
 
+# ---------------------------------------------------------
 # String lower() Method
 # The lower() method returns a string where all characters are lower case.
 # Symbols and Numbers are ignored.
@@ -933,6 +978,7 @@ print(x)
 # Out: hello my friends
 
 
+# ---------------------------------------------------------
 # String lstrip() Method
 # The lstrip() method removes any leading characters (space is the default leading character to remove)
 
@@ -951,6 +997,7 @@ print(x)
 # Out: banana
 
 
+# ---------------------------------------------------------
 # String maketrans() Method
 # The maketrans() method returns a mapping table that can be used with the translate() 
 # method to replace specified characters.
@@ -988,6 +1035,7 @@ print(txt.maketrans(x, y, z))
 # Out: {109: 101, 83: 74, 97: 111, 111: None, 100: None, 110: None, 103: None, 104: None, 116: None}
 
 
+# ---------------------------------------------------------
 # String partition() Method
 # The partition() method searches for a specified string, and splits the string into a tuple containing three elements.
 # The first element contains the part before the specified string.
@@ -1007,6 +1055,7 @@ print(x)
 # Out: ('I could eat bananas all day', '', '')
 
 
+# ---------------------------------------------------------
 # String replace() Method
 # The replace() method replaces a specified phrase with another specified phrase.
 
@@ -1032,6 +1081,7 @@ print(x)
 # Out: three three was a race horse, two two was one too.
 
 
+# ---------------------------------------------------------
 # String rfind() Method
 # The rfind() method finds the last occurrence of the specified value.
 # The rfind() method returns -1 if the value is not found.
@@ -1068,6 +1118,7 @@ print(txt.rindex("q"))
 # Out: ValueError: substring not found
 
 
+# ---------------------------------------------------------
 # String rindex() Method
 # The rindex() method finds the last occurrence of the specified value.
 # The rindex() method raises an exception if the value is not found.
@@ -1104,6 +1155,7 @@ print(txt.rindex("q"))
 # Out: ValueError: substring not found
 
 
+# ---------------------------------------------------------
 # String rjust() Method
 # The rjust() method will right align the string, using a specified character (space is default) as the fill character.
 
@@ -1122,6 +1174,7 @@ print(x)
 # Out: OOOOOOOOOOOOOObanana
 
 
+# ---------------------------------------------------------
 # String rpartition() Method
 # The rpartition() method searches for the last occurrence of a specified string, and splits the string into a tuple containing three elements.
 # The first element contains the part before the specified string.
@@ -1141,6 +1194,7 @@ print(x)
 # Out: ('', '', 'I could eat bananas all day, bananas are my favorite fruit')
 
 
+# ---------------------------------------------------------
 # String rsplit() Method
 # The rsplit() method splits a string into a list, starting from the right.
 # If no "max" is specified, this method will return the same as the split() method.
@@ -1162,6 +1216,7 @@ print(x)
 # Out: ['apple, banana', 'cherry']
 
 
+# ---------------------------------------------------------
 # String rstrip() Method
 # The rstrip() method removes any trailing characters (characters at the end a string), 
 # space is the default trailing character to remove.
@@ -1181,6 +1236,7 @@ print(x)
 # Out: banana
 
 
+# ---------------------------------------------------------
 # String split() Method
 # The split() method splits a string into a list.
 # You can specify the separator, default separator is any whitespace.
@@ -1216,6 +1272,7 @@ print(x)
 # Out: ['apple', 'banana#cherry#orange']
 
 
+# ---------------------------------------------------------
 # String splitlines() Method
 # The splitlines() method splits a string into a list. The splitting is done at line breaks.
 
@@ -1234,6 +1291,7 @@ print(x)
 # Out: ['Thank you for the music\n', 'Welcome to the jungle']
 
 
+# ---------------------------------------------------------
 # String startswith() Method
 # The startswith() method returns True if the string starts with the specified value, otherwise False.
 
@@ -1252,6 +1310,7 @@ print(x)
 # Out: True
 
 
+# ---------------------------------------------------------
 # String strip() Method
 # The strip() method removes any leading (spaces at the beginning) and 
 # trailing (spaces at the end) characters (space is the default leading character to remove)
@@ -1271,6 +1330,7 @@ print(x)
 # Out: banana
 
 
+# ---------------------------------------------------------
 # String swapcase() Method
 # The swapcase() method returns a string where all the upper case letters are lower case and vice versa.
 
@@ -1282,6 +1342,7 @@ print(x)
 # Out: hELLO mY nAME iS peter
 
 
+# ---------------------------------------------------------
 # String title() Method
 # The title() method returns a string where the first character in every word is upper case. Like a header, or a title.
 # If the word contains a number or a symbol, the first letter after that will be converted to upper case.
@@ -1307,6 +1368,7 @@ print(x)
 # Out: Hello B2B2B2 And 3G3G3G
 
 
+# ---------------------------------------------------------
 # String translate() Method
 # The translate() method returns a string where some specified characters are replaced with the character described in a dictionary, or in a mapping table.
 # Use the maketrans() method to create a mapping table.
@@ -1356,6 +1418,7 @@ print(txt.translate(mydict))
 # Out: G i Joe!
 
 
+# ---------------------------------------------------------
 # String upper() Method
 # The upper() method returns a string where all characters are in upper case.
 # Symbols and Numbers are ignored.
@@ -1368,6 +1431,7 @@ print(x)
 # Out: HELLO MY FRIENDS
 
 
+# ---------------------------------------------------------
 # String zfill() Method
 # The zfill() method adds zeros (0) at the beginning of the string, until it reaches the specified length.
 # If the value of the len parameter is less than the length of the string, no filling is done.
