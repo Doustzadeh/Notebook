@@ -1,5 +1,6 @@
 # region Operators
 
+# ---------------------------------------------------------
 # Arithmetic Operators
 # Arithmetic operators are used with numeric values to perform common mathematical operations:
 
@@ -46,6 +47,7 @@ print(x // y)
 # Out: 7
 
 
+# ---------------------------------------------------------
 # Assignment Operators
 # Assignment operators are used to assign values to variables:
 
@@ -127,6 +129,7 @@ print(x)
 # Out: 40
 
 
+# ---------------------------------------------------------
 # Comparison Operators
 # Comparison operators are used to compare two values:
 
@@ -167,6 +170,7 @@ print(x <= y)
 # Out: False
 
 
+# ---------------------------------------------------------
 # Logical Operators
 # Logical operators are used to combine conditional statements:
 
@@ -186,6 +190,7 @@ print(not(x > 3 and x < 10))
 # Out: False
 
 
+# ---------------------------------------------------------
 # Identity Operators
 # Identity operators are used to compare the objects, # not if they are equal, 
 # but if they are actually the same object, # with the same memory location:
@@ -215,6 +220,7 @@ print(x != y)
 # Out: False
 
 
+# ---------------------------------------------------------
 # Membership Operators
 # Membership operators are used to test if a sequence is presented in an object:
 
@@ -231,6 +237,7 @@ print("pineapple" not in x)
 # Out: True
 
 
+# ---------------------------------------------------------
 # Bitwise Operators
 # Bitwise operators are used to compare (binary) numbers:
 # Operator	Name	                Description
