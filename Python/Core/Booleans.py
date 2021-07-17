@@ -2,6 +2,7 @@
 
 # Booleans represent one of two values: True or False.
 
+# ---------------------------------------------------------
 # Boolean Values
 
 # %% Example
@@ -24,6 +25,7 @@ else:
 # Out: b is not greater than a
 
 
+# ---------------------------------------------------------
 # Evaluate Values and Variables
 
 # %% Example
@@ -44,6 +46,7 @@ print(bool(y))
 # Out: True
 
 
+# ---------------------------------------------------------
 # Most Values are True
 # Almost any value is evaluated to True if it has some sort of content.
 # Any string is True, except empty strings.
@@ -58,6 +61,7 @@ print(bool(["apple", "cherry", "banana"]))
 # Out: True
 
 
+# ---------------------------------------------------------
 # Some Values are False
 
 # %% Example
@@ -73,20 +77,21 @@ print(bool({}))
 
 # %% Example
 class myclass():
-  def __len__(self):
-    return 0
+    def __len__(self):
+      return 0
 
 myobj = myclass()
 print(bool(myobj))
 # Out: False
 
 
+# ---------------------------------------------------------
 # Functions can Return a Boolean
 
 # %% Example
 # Print the answer of a function:
 def myFunction() :
-  return True
+    return True
 
 print(myFunction())
 # Out: True
@@ -97,9 +102,9 @@ def myFunction() :
   return True
 
 if myFunction():
-  print("YES!")
+    print("YES!")
 else:
-  print("NO!")
+    print("NO!")
 # Out: YES!
 
 # %% Example
