@@ -1,5 +1,6 @@
 # region Numbers
 
+# ---------------------------------------------------------
 # Python Numbers
 
 # %% Example
@@ -15,6 +16,7 @@ print(type(z))
 # Out: <class 'complex'>
 
 
+# ---------------------------------------------------------
 # Int
 
 # %% Example
@@ -27,6 +29,7 @@ print(type(y))
 print(type(z))
 
 
+# ---------------------------------------------------------
 # Float
 
 # %% Example
@@ -48,6 +51,7 @@ print(type(y))
 print(type(z))
 
 
+# ---------------------------------------------------------
 # Complex
 
 # %% Example
@@ -60,6 +64,7 @@ print(type(y))
 print(type(z))
 
 
+# ---------------------------------------------------------
 # Type Conversion
 
 # %% Example
@@ -85,11 +90,11 @@ print(type(b))
 print(type(c))
 
 
+# ---------------------------------------------------------
 # Random Number
 
 # %% Example
 import random
-
 print(random.randrange(1, 10))
 
 # endregion
