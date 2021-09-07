@@ -26,7 +26,7 @@ C:\boost_x_x_x\tools\build>bootstrap.bat gcc
 4. Build 32-bit static:
 
 ```bash
-cd C:\boost_x_x_x>
+cd C:\boost_x_x_x
 ```
 ```bash
 C:\boost_x_x_x>b2.exe --toolset=gcc architecture=x86 address-model=32 threading=multi variant=release link=static runtime-link=static --build-type=complete stage --stagedir=stage/x86
