@@ -17,6 +17,8 @@ cd C:\wxWidgets-x.x.x\build\msw
 - ##### Builds static
 ```bash
 mingw32-make -f makefile.gcc SHARED=0 MONOLITHIC=0 BUILD=release
+```
+```bash
 mingw32-make -f makefile.gcc SHARED=0 MONOLITHIC=0 BUILD=debug
 ```
 
@@ -24,6 +26,8 @@ mingw32-make -f makefile.gcc SHARED=0 MONOLITHIC=0 BUILD=debug
 
 ```bash
 mingw32-make -f makefile.gcc SHARED=1 MONOLITHIC=1 BUILD=release
+```
+```bash
 mingw32-make -f makefile.gcc SHARED=1 MONOLITHIC=1 BUILD=debug
 ```
 
