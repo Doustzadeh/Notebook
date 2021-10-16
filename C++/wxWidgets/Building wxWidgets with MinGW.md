@@ -6,28 +6,30 @@ The last stable wxWidgets distribution can be found at the wxWidgets website (ht
 
 Unzip download file to "C:\wxWidgets-x.x.x" (e.g. "C:\wxWidgets-3.1.5") .
 
+
+
 #### Building your own wxWidgets library
 
 Before anything, add the bin directory of MinGW to the %PATH% variable. Now it is time to compile wxWidgets, open the command prompt and change to the wxWidgets directory:
 
-```bash
+```shell
 cd C:\wxWidgets-x.x.x\build\msw
 ```
 
 - ##### Builds static
-```bash
+```shell
 mingw32-make -f makefile.gcc SHARED=0 MONOLITHIC=0 BUILD=release
 ```
-```bash
+```shell
 mingw32-make -f makefile.gcc SHARED=0 MONOLITHIC=0 BUILD=debug
 ```
 
 - ##### Builds dynamic
 
-```bash
+```shell
 mingw32-make -f makefile.gcc SHARED=1 MONOLITHIC=1 BUILD=release
 ```
-```bash
+```shell
 mingw32-make -f makefile.gcc SHARED=1 MONOLITHIC=1 BUILD=debug
 ```
 
