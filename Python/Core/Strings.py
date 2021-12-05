@@ -5,8 +5,11 @@
 
 # %% Example
 print("Hello")
+# Out: Hello
 print('Hello')
-
+# Out: Hello
+print("*" * 10)
+# Out: **********
 
 # ---------------------------------------------------------
 # Assign String to a Variable
