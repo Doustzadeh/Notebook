@@ -134,6 +134,7 @@ print(b[-5:-2])
 # The upper() method returns the string in upper case:
 a = "Hello, World!"
 print(a.upper())
+# Out: HELLO, WORLD!
 
 
 # ---------------------------------------------------------
@@ -143,6 +144,7 @@ print(a.upper())
 # The lower() method returns the string in lower case:
 a = "Hello, World!"
 print(a.lower())
+# Out: hello, world!
 
 
 # ---------------------------------------------------------
@@ -151,7 +153,8 @@ print(a.lower())
 # %% Example
 # The strip() method removes any whitespace from the beginning or the end:
 a = " Hello, World! "
-print(a.strip())  # returns "Hello, World!"
+print(a.strip())  
+# Out: "Hello, World!"
 
 
 # ---------------------------------------------------------
@@ -203,6 +206,9 @@ print(c)
 age = 36
 txt = "My name is John, and I am {}"
 print(txt.format(age))
+# Out: My name is John, and I am 36
+print(f"My name is John, and I am {age}")
+# Out: My name is John, and I am 36
 
 # %% Example
 quantity = 3
