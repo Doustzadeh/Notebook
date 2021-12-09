@@ -3,4 +3,5 @@
 /.vscode/
 /.spyproject/
 /Python/.idea/
+/Python/.vscode/
 /Python/Core/__pycache__/
