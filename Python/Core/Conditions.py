@@ -20,7 +20,7 @@ if b > a:
 a = 33
 b = 200
 if b > a:
-print("b is greater than a") # you will get an error
+    print("b is greater than a") # you will get an error
 # Out: IndentationError: expected an indented block
 
 
@@ -91,6 +91,10 @@ print("A") if a > b else print("=") if a == b else print("B")
 
 
 # ---------------------------------------------------------
+# Logical Operators
+# and or not
+
+# ---------------------------------------------------------
 # And
 
 # %% Example
@@ -101,6 +105,7 @@ c = 500
 if a > b and c > a:
     print("Both conditions are True")
 # Out: Both conditions are True
+
 
 # ---------------------------------------------------------
 # Or
@@ -138,5 +143,27 @@ a = 33
 b = 200
 if b > a:
     pass
+
+
+# ---------------------------------------------------------
+# Ternary Operator
+
+# %% Example
+age = 12
+message = "Eligible" if age >= 18 else "Not eligible"
+print(message)
+# Out: Not eligible
+
+
+# ---------------------------------------------------------
+# Chaining Comparison Operators
+
+# %% Example
+# age should be between 18 and 65
+age = 22
+# if age >= 18 and age < 65:
+if 18 <= age < 65:
+    print("Eligible")
+# Out: eligible
 
 # endregion
