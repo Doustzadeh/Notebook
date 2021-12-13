@@ -97,4 +97,35 @@ print(type(c))
 import random
 print(random.randrange(1, 10))
 
+
+# ---------------------------------------------------------
+# Numeric Operations
+
+# %% Example
+x = 10
+print(x + 3)
+print(x - 3)
+print(x * 3)
+print(x / 3)
+print(x // 3)
+print(x % 3)
+print(x ** 3)
+x += 3
+print(x)
+
+
+# ---------------------------------------------------------
+# Mathematical functions
+
+# %% Example
+import math
+print(round(2.9))
+# Out: 3
+print(abs(-2.9))
+# Out: 2.9
+print(math.ceil(2.2))
+# Out: 3
+print(math.floor(2.2))
+# Out: 2
+
 # endregion
