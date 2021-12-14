@@ -164,4 +164,27 @@ for x in [0, 1, 2]:
     pass
 # having an empty for loop like this, would raise an error without the pass statement.
 
+
+# ---------------------------------------------------------
+
+# %% Example
+for number in range(3):
+    print("Attempt", number + 1, (number + 1) * ".")
+# Out: Attempt 1 .
+#      Attempt 2 ..
+#      Attempt 3 ...
+
+for number in range(1, 4):
+    print("Attempt", number, number * ".")
+# Out: Attempt 1 .
+#      Attempt 2 ..
+#      Attempt 3 ...
+for number in range(1, 10, 2):
+    print("Attempt", number, number * ".")
+# Out: Attempt 1 .
+#      Attempt 3 ...
+#      Attempt 5 .....
+#      Attempt 7 .......
+#      Attempt 9 .........
+
 # endregion
